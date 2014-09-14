@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" href="./css/jquery.mobile-git.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<title>Rate It</title>
+	</head>
+	<body class="body-bg">
+		<div data-role="page">
+			<div data-role="header" class="page-footer" data-position="fixed">
+        		<div class="header_center p-t-12 m-b-5">
+        			<img src="img/up.png" alt="Up Arrow Logo" id="fb-up" class="down_arrow"/>
+        			<h4 class="m-l-10 m-t-0 font-lighter pagination">What did you think of products <br/> and service at Alfred & Constance ?</h4>
+        		</div>
+        	</div>
+			<div data-role="content" class="m-t-19">
+       			<div data-role="header" class="feedback_header m-b-6"><img class="products-icons" src="img/products.png">
+       			<span class="headerText">Products</span>
+      	    	</div>
+  	    		<div class="messages_div m-t-3">
+	            	<div class="ui-grid-b"> 
+	            		<div class="ui-block-a">
+	            			<span class="img_left"><img src="img/bad.png" alt="bad Logo" class="feedback-icons"/>
+	            				<p class="fbText">Poor</p>
+	            			</span>
+	            		</div> 
+	            		<div class="ui-block-b">
+	            			<span class="img_center"><img src="img/average.png" alt="bad Logo" class="feedback-icons"/>
+	            				<p class="fbText">Average</p>
+	            			</span>
+	            		</div> 
+				        <div class="ui-block-c">
+				        	<span class=" img_right"><img src="img/happy.png" class="feedback-icons" alt="bad Logo"/>
+				        		<p class="fbText">Great</p>
+				        	</span>
+				        </div> 
+				   </div>
+        		</div>
+        	</div>
+        		<div data-role="content" class="m-t-19">
+        			<div data-role="header" class="feedback_header m-b-6"><img src="img/service.png" class="products-icons">
+        				<span class="headerText">Service</span>
+        	    	</div>
+       	    	<div>
+  	    		<div class="abc messages_div m-t-3">
+	            	<div class="ui-grid-b"> 
+	            		<div class="ui-block-a">
+	            			<span class="img_left"><img src="img/bad.png" class="feedback-icons" alt="bad Logo"/>
+	            				<p class="fbText">Poor</p>
+	            			</span>
+	            		</div> 
+	            		<div class="ui-block-b">
+	            			<span class="img_center"><img src="img/average.png" class="feedback-icons" alt="bad Logo"/>
+	            				<p class="fbText">Average</p>
+	            			</span>
+	            		</div> 
+				        <div class="ui-block-c">
+				        	<span class=" img_right"><img src="img/happy.png" class="feedback-icons" alt="bad Logo"/>
+				        		<p class="fbText">Great</p>
+				        	</span>
+				        </div> 
+				   </div>
+        		</div>
+				<div data-role="footer" class="page-footer" data-position="fixed">
+					<h5 class="foot_text pagination">2 of 3</h5>
+					<img src="img/down.png" alt="Down Arrow Logo" id="fb-down" class="arrow_center m-b-6"/>
+				</div>
+			</div>
+		</div>
+			<script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
+			<script type="text/javascript" src="./js/jquery.mobile-git.js"></script>
+			<script type="text/javascript" src="cordova.js"></script>
+			<script type="text/javascript" src="js/index.js"></script>
+			<script>
+				$('#fb-up').click(function() {
+				window.location.href = "faces.html";
+				});
+				$('#fb-down').click(function() {
+					window.location.href = "messages.html";
+				});
+			</script>
+		</body>
+</html>

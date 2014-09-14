@@ -1,0 +1,348 @@
+.body-bg {
+	background-color: #F3F3F3;
+}
+
+.close_icon {
+	margin-top: 18px;
+	margin-left: 8px;
+	width: 22px;
+	height: 22px
+}
+
+.alphabet_icon {
+	width: 22px;
+	height: 22px;
+	margin-top: 13px;
+	margin-right: 10px;
+}
+
+.head_text {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.white-color {
+	color: #ffffff !important;
+	font-weight: lighter !important;
+}
+
+.m-t-7{
+	margin-top: 7px;
+}
+
+.m-t-15 {
+	margin-top: -15px;
+}
+
+.m-t-3{
+	margin-top: 3px;
+}
+
+.m-t-20 {
+	margin-top: 20px !important;
+}
+
+.p-t-50 {
+	padding-top: 50px !important;
+}
+
+.p-t-12 {
+	padding-top: 12px;
+}
+
+
+.m-t-25 {
+	margin-top: 25px !important;
+}
+
+.p-b-25 {
+	padding-bottom: 25px !important;
+}
+
+.p-b-10 {
+	padding-bottom: 10px !important;
+}
+
+
+.m-t-2{
+	margin-top: 2px !important;
+}
+
+.m-t-0{
+	margin-top: 0px !important;
+}
+
+.m-t-10 {
+	margin-top: 10px !important;
+}
+
+.float_right {
+	float: right;
+}
+
+.float_left {
+	float: left
+}
+.emoticons {
+	margin-top: 35pt !important;
+	width: 86px;
+	height: 86px
+}
+
+.foot_text {
+	font-size: 0.8em !important;
+	font-weight: lighter !important;
+	margin-top: 10px;
+}
+
+.page-footer {
+	background-color: #F3F3F3 !important;
+}
+
+.index-header {
+	background-color: #54c5c3 !important;
+}
+
+.arrow_center {
+	margin: 0 auto;
+	display: block;
+}
+
+.logo_alignment {
+	margin: 0 auto;
+	display: block;
+}
+
+.header_center {
+	text-align: center
+}
+
+.messages_div {
+	width: auto;
+	background-color: #ffffff;
+	margin-top: -3px !important;
+}
+
+.magenta_color {
+	color: #54c5c3
+}
+
+.font_normal {
+	font-weight: normal
+}
+
+.font-lighter {
+	font-weight: lighter
+}
+
+.m-l-10 {
+	margin-left: 10px
+}
+
+.m-r-10 {
+	margin-right: 10px
+}
+
+.nps_div {
+	width: auto;
+	background-color: #ffffff;
+}
+
+/*  *******************************************Overriding the Slider CSS property******************************************  */
+
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head + body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head + body .ui-btn.ui-btn-a:visited {
+	background-color: #54c5c3 !important;
+}
+
+.ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head + body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active {
+	background-color: #54c5c3 !important;
+	border-color: #54c5c3 !important;
+}
+
+.ui-slider-track {
+	height: 4px !important;
+	margin-top: 4px !important;
+}
+
+.ui-slider-track .ui-btn.ui-slider-handle {
+	height: 13px !important;
+	margin-top: -7px !important;
+	width: 15px !important;
+}
+
+/*  ******************************************* /Overriding the Slider CSS property******************************************  */
+
+.box-padding {
+	padding: 3px 10px 10px 10px;
+}
+
+.icon-size {
+	width: 30px;
+	height: 30px;
+}
+
+.m-t-8 {
+	margin-top: -8px;
+}
+
+.list-view-div {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.register-div {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.search-div {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.register-button {
+	width: 100%;
+}
+
+.pagination {
+	color: #a5a5a5;
+}
+
+.list-footer-icons {
+	width: 32px;
+	height: 32px;
+	padding-top: 11%;
+}
+
+.icon-text {
+	color: #54c5c3;
+	font-weight: lighter;
+	font-size: 0.7em;
+}
+
+.list-view > li > .ui-btn {
+	background-color: #ffffff !important;
+}
+
+.list-view-head {
+	font-weight: normal !important;
+}
+
+.list-view-text {
+	color: #a5a5a5;
+	font-weight: lighter !important;
+	font-size: 0.7em !important;
+	margin-top: -3% !important;
+}
+
+.list-item-icons {
+	width: 40px;
+	height: 40px;
+}
+
+.ui-listview .ui-li-has-thumb > img:first-child, .ui-listview .ui-li-has-thumb > .ui-btn > img:first-child, .ui-listview .ui-li-has-thumb .ui-li-thumb {
+	top: 13px;
+	left: 40px;
+}
+
+#text {
+	z-index: 100;
+	position: absolute;
+	color: #000000;
+	left: 52px;
+	top: 17px;
+	font-size: 0.7em;
+	color: #a5a5a5;
+	font-weight: lighter
+}
+
+#text-m {
+	z-index: 100;
+	position: absolute;
+	color: #000000;
+	left: 54px;
+	top: 26px;
+	font-size: 0.7em;
+	color: #a5a5a5;
+	font-weight: lighter
+}
+
+#list-view .ui-li{
+	height : 10%;
+}
+
+.products-icons{
+	width: 21px !important;
+	height: 21px !important;
+}
+
+.feedback_header{
+	background-color: #ffffff !important;
+	padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.headerText{
+	display: inline-table;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: -24px !important;
+    padding-left: 35px;
+    position: absolute;
+}
+
+.iconImg{
+	padding-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    list-style: none outside none;
+    display: inline;
+}
+.img_center{
+	display: block;
+    padding-bottom: 55px;
+    padding-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.img_right{
+	float:right;
+	padding-right: 20px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+.img_left{
+	float:left;
+	padding-left: 20px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+.fbText{
+	text-align:center;
+	margin: auto;
+}
+
+.m-b-6{
+	margin-bottom: 6px;
+}
+
+.feedback-icons{
+	width: 50px;
+	height: 50px;
+}
+.m-b-5{
+	margin-bottom: -5px;
+}
+
+.list-footer-icons-me {
+    height: 32px;
+    width: 28px;
+}
+.m-t-19{
+	margin-top: -19px;
+}
+
+.happy-logo{
+	margin-top: 0px !important;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" href="./css/jquery.mobile-git.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<title>Rate It</title>
+	</head>
+	<body class="body-bg">
+		<div data-role="page">
+			<div data-role="header" class="page-footer" data-position="fixed">
+
+				<div class="ui-grid-b">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"><img src="img/up.png" alt="Up Arrow Logo" id="faces_up" class="arrow_center m-t-20"/>
+					</div>
+					<div class="ui-block-c"><img src="img/camera.png" alt="Camera Arrow Logo" id="faces_up" class="float_right m-t-10 icon-size m-r-10"/>
+					</div>
+
+				</div><!-- /grid-b -->
+			</div>
+			<div data-role="content">
+				<div class="messages_div m-t-10 box-padding">
+					<img src="img/message.png" alt="Messages Logo" class="float_right m-t-10 icon-size"/>
+					<div class="float_left m-t-8">
+						<h5 class="m-l-10 magenta_color font_normal">OPTIONAL</h5>
+						<h5 class="m-l-10 m-t-15 font_normal">Any messages to share?</h5>
+					</div>
+					<br />
+					<br />
+					<br />
+					<br />
+					<div class="m-l-10 m-r-10 m-t-10">
+						<input type="text" id="direct-message" placeholder="Direct Message to the manager" />
+					</div>
+					<div class="m-l-10 m-r-10 m-t-25 p-b-25">
+						<input type="text" id="tips" placeholder="Tips for other users" />
+					</div>
+				</div>
+				<div class="nps_div m-t-25 box-padding">
+					<img src="img/nps.png" alt="NPS Logo" class="float_right m-t-10 icon-size"/>
+					<div class="float_left m-t-8">
+						<h5 class="m-l-10 magenta_color font_normal">OPTIONAL</h5>
+						<h5 class="m-l-10 m-t-15 font_normal">How likely are you to
+						<br/>
+						recommend them to a friend?</h5>
+					</div>
+					<br />
+					<br />
+					<br />
+					<br />
+					<label>
+						<br/>
+					</label>
+					<input type="range" name="slider-fill" id="slider-fill" value="5" min="0" max="10" data-highlight="true" />
+					<div class="ui-grid-b foot_text p-t-50">
+						<div class="ui-block-a">
+							<span>Not Likely</span>
+						</div>
+						<div class="ui-block-b header_center">
+							<span>Neutral</span>
+						</div>
+						<div class="ui-block-c">
+							<span class="float_right">Very Likely</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" class="page-footer" data-position="fixed">
+				<h5 class="foot_text pagination">3 of 3</h5>
+				<div class="register-div">
+				<!-- <input type="button"  value="Button" class="register-button"/> -->
+				<img src="img/rateit-button.png" alt="Rate it Logo" class="register-button"/>
+				</div>
+				
+			</div>
+		</div>
+		<script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="./js/jquery.mobile-git.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script>
+			$(function() {
+				$('#faces_up').click(function() {
+				window.location.href = "feedback.html";
+			});
+			});
+		</script>
+	</body>
+</html>

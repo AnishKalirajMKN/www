@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" href="./css/jquery.mobile-git.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<title>Rate It</title>
+	</head>
+	<body class="body-bg">
+		<div data-role="page">
+			<div data-role="header" class="index-header" data-position="fixed">
+				<img src="img/alphabet.png" alt="Alphabet logo"class="alphabet_icon float_right"/>
+				<div class="header_center">
+					<h2 class="head_text white-color">Please Rate Your Experience</h2>
+				</div>
+			</div>
+			<div class="search-div">
+				<input name="search-1" id="searchTicket" value="" type="search" placeholder="Search nearby shops,restaurants">
+			</div>
+			<div class="list-view-div">
+				<ul data-role="listview" data-inset="true" data-icon="false" id="list-view" class="list-view">
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">37</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">Shake Shack</h2>
+						<p class="magenta_color list-view-text">
+							11 Madison Ave (at E 23rd st)
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">34</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">Saks Fifth Avenue</h2>
+						<p class="list-view-text">
+							611 5th Ave (between 49th & 5oth Ave)
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">23</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">Strand Book Store</h2>
+						<p class="magenta_color list-view-text">
+							82B Broadway (at E 12th st)t
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">51</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">Dairy Queen Grill & Chill</h2>
+						<p class="list-view-text">
+							54 W 14th st (between 5th & 6th Ave)
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">74</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">AMC Empire 25</h2>
+						<p class="magenta_color list-view-text">
+							234 W 42nd st(between 7th & 8th)
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">50</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">230 5th Rooftop Lounge</h2>
+						<p class="list-view-text">
+							230 5th Ave (between 25th & 26th st)
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">62</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">The Garret</h2>
+						<p class="magenta_color list-view-text">
+							296 Bleeker st(above 5 guys)
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">82</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">AMC Empire 25</h2>
+						<p class="magenta_color list-view-text">
+							234 W 42nd st(between 7th & 8th)
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">59</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">230 5th Rooftop Lounge</h2>
+						<p class="list-view-text">
+							230 5th Ave (between 25th & 26th st)
+						</p> </a>
+					</li>
+					<li class="list-next">
+						<a href="#"> <img src="img/circle.png" class="list-item-icons"> <h2 id="text">32</h2> <h2 id="text-m">m</h2> <h2 class="magenta_color list-view-head">The Garret</h2>
+						<p class="magenta_color list-view-text">
+							296 Bleeker st(above 5 guys)
+						</p> </a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" class="page-footer" data-position="fixed">
+				<div class="ui-grid-c p-b-15">
+					<div class="ui-block-a">
+						<div class="header_center">
+							<img src="img/rateit.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<span class="icon-text">Rate It</span>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div class="header_center">
+							<img src="img/discover.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<span class="icon-text">Discover</span>
+						</div>
+					</div>
+					<div class="ui-block-c">
+						<div class="header_center">
+							<img src="img/notification.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<span class="icon-text">Notifications</span>
+						</div>
+					</div>
+					<div class="ui-block-d">
+						<div class="header_center">
+							<img src="img/me.png" alt="Alphabet logo"class="arrow_center list-footer-icons list-footer-icons-me"/>
+							<span class="icon-text">Me</span>
+						</div>
+					</div>
+				</div><!-- /grid-b -->
+			</div>
+		</div>
+		<script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="./js/jquery.mobile-git.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script>
+			$(function() {
+
+				// --------------------------------- Geo Location API --------------------------------------------------
+				// navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError,{maximumAge: 3000, timeout: 60000, enableHighAccuracy: true});
+				// --------------------------------- /Geo Location API --------------------------------------------------
+
+				// --------------------------------- Foursquare API --------------------------------------------------
+				$.ajax({
+					url : "https://api.foursquare.com/v2/venues/search?ll=12.92,80.199&oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914",
+					type : 'POST',
+					crossDomain : true,
+					timeout : 30000,
+					data : JSON.stringify({
+						key : "value"
+					}),
+					error : function(jqXHR) {
+						console.log(error);
+					}
+				}).done(function(data, textStatus, jqXHR) {
+					var result = $.parseJSON(jqXHR.responseText);
+					console.log(result.response.venues[0].categories[0].name);
+					// $.each(data.ticket, function(i, item) {
+					// });
+				});
+				// --------------------------------- /Foursquare API --------------------------------------------------
+			});
+			$('.list-next').click(function() {
+				window.location.href = "faces.html";
+
+			});
+		</script>
+	</body>
+</html>
