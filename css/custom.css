@@ -96,7 +96,7 @@
 .foot_text {
 	font-size: 0.8em !important;
 	font-weight: lighter !important;
-	margin-top: 10px;
+	margin-top: 0 !important;
 }
 
 .page-footer {
@@ -107,8 +107,15 @@
 	background-color: #54c5c3 !important;
 }
 
+.up_arrow_img{
+	height: 15px;
+    padding-bottom: 5px;
+}
+.down_arrow_img{
+	height: 15px;
+}
 .arrow_center {
-	margin: 0 auto 12px;
+	margin: 0 auto;
 	display: block;
 }
 
@@ -212,7 +219,15 @@
 .pagination {
 	color: #a5a5a5;
 }
-
+.m-b--10{
+	margin-bottom: -10px !important;
+}
+.m-b--21{
+	margin-bottom: -21px;
+}
+.m-t--15{
+	margin-top:-15px;
+}
 .list-footer-icons {
 	width: 32px;
 	height: 32px;
@@ -361,8 +376,11 @@
     float: left;
 }
 .happy-logo{
-	margin-top: 0px !important;
+	margin-top: -10px !important;
 }
 .m-b-12{
 	margin-bottom : 12px;
+}
+.m-b-21{
+	margin-bottom: 21px;
 }
