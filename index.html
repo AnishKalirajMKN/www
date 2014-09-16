@@ -37,10 +37,10 @@ under the License.
 				</div>
 			</div>
 			<div class="search-div">
-				<input name="search-1" id="searchTicket" value="" type="search" placeholder="Search nearby shops,restaurants">
+				<input name="search-1" id="searchTicket"  value="" type="search" placeholder="Search nearby shops,restaurants">
 			</div>
 			<div class="list-view-div">
-				<ul data-role="listview" data-inset="true" data-icon="false" id="list-view" class="list-view">
+				<ul data-role="listview"  data-filter='true' data-icon="false" data-input="#searchTicket" id="list-view" class="list-view" >
                     <li class="list-next">
                         <a href="#"> 
                         	<div class="circle list-item-icons"> 
@@ -55,7 +55,7 @@ under the License.
                     <li class="list-next">
                         <a href="#"> 
                         <div class="circle list-item-icons"> 
-                        <h2 id="text">34</h2>
+                        <h2 id="text">3432</h2>
                         <h2 id="text-m">m</h2>
                         </div>
                         <h2 class="magenta_color list-view-head p-l-15">Saks Fifth Avenue</h2>
@@ -66,7 +66,7 @@ under the License.
                     <li class="list-next">
                         <a href="#">
                         <div class="circle list-item-icons">  
-                        <h2 id="text">23</h2>
+                        <h2 id="text">233</h2>
                         <h2 id="text-m">m</h2>
                         </div>
                         <h2 class="magenta_color list-view-head p-l-15">Strand Book Store</h2>
@@ -214,8 +214,8 @@ under the License.
 				// --------------------------------- /Foursquare API --------------------------------------------------
 			});
 			$('.list-next').click(function() {
-				window.location.href = "faces.html";
-
+				app.showPage('faces');
+				//window.location.href = "faces.html";
 			});
 		</script>
 	</body>

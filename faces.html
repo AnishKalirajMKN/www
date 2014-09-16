@@ -40,16 +40,16 @@
         	<div data-role="content">
             <!-- <button id = "button" onclick="logo_alignment()">Button</button> -->
             <!-- <p id="geolocation">Finding geolocation...</p> -->
-            <div class="emoticons logo_alignment happy-logo">
+            <div class="emoticons logo_alignment happy-logo" id="veryHappy">
             	<img src="img/very_happy.png" alt="Very Happy Logo"/>
             </div>
-            <div class="emoticons logo_alignment">
+            <div class="emoticons logo_alignment" id="happy">
             	<img src="img/happy.png" alt="Happy Logo"/>
             </div>
-            <div class="emoticons logo_alignment">
+            <div class="emoticons logo_alignment" id="bad">
             	<img src="img/bad.png" alt="Bad logo"/>
             </div>
-            <div class="emoticons logo_alignment">
+            <div class="emoticons logo_alignment" id="terrible">
             	<img src="img/terrible.png" alt="Terrible logo"/>
             	<!-- <h5 class="foot_text">1 of 3</h5> -->
             </div>
@@ -69,6 +69,22 @@
 			});
 			$('.close_icon').click(function() {
 				window.location.href = "index.html";
+			});
+			$('#veryHappy').click(function() {
+				window.localStorage["faces"] = 1;				
+				app.showPage('feedback');
+			});
+			$('#happy').click(function() {
+				window.localStorage["faces"] = 2;
+				app.showPage('feedback');
+			});
+			$('#bad').click(function() {
+				window.localStorage["faces"] = 3;				
+				app.showPage('feedback');
+			});
+			$('#terrible').click(function() {
+				window.localStorage["faces"] = 4;				
+				app.showPage('feedback');
 			});
         </script>
     </body>

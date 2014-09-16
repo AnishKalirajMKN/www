@@ -91,8 +91,7 @@ under the License.
 			<div data-role="footer" class="page-footer" data-position="fixed">
 				<h5 class="foot_text pagination">3 of 3</h5>
 				<div class="register-div">
-				<!-- <input type="button"  value="Button" class="register-button"/> -->
-				<img src="img/rateit-button.png" alt="Rate it Logo" class="register-button"/>
+				<img id="rateIt"src="img/rateit-button.png" alt="Rate it Logo" class="register-button"/>
 				</div>
 				
 			</div>
@@ -106,6 +105,19 @@ under the License.
 				$('#faces_up').click(function() {
 				window.location.href = "feedback.html";
 			});
+			});
+			$('#rateIt').click(function() {
+				var shareMessage = $('#direct-message').val();
+				var userTips = $('#tips').val();
+				var sliderfill = $('#slider-fill').val();
+			    if(shareMessage != '' && userTips != '') {
+			    	app.showLoader();
+			    	$('#direct-message').val('');
+			    	$('#tips').val('');
+			    	$('#slider-fill').val('5');
+			    	$("#slider-fill").slider("refresh");
+			    	app.rateIt(shareMessage,userTips,sliderfill);
+			    }			
 			});
 		</script>
 	</body>

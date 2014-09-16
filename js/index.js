@@ -46,6 +46,73 @@ var app = {
 		 alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
 	},
+	
+	//------------OPEN NEW PAGE-----------//
+    showPage : function(page) {
+    	app.showLoader();
+    	window.location.href = page + ".html";   
+    },
+
+    //---------------SHOW LOADER------------------//
+    showLoader : function() {
+    	$("body").addClass('ui-disabled');
+        $.mobile.loading("show");
+    },
+
+	//---------------HIDE LOADER------------------//
+    hideLoader : function() {
+        $.mobile.loading("hide");
+        $("body").removeClass('ui-disabled');
+    },
+    
+    onOnline : function() {
+        app.hideLoader();
+        navigator.notification.alert('Check you network connection or try again later.', app.dummyFunction(), 'Warning', 'OK');
+    },
+    
+    //------------CHECK INTERNET CONNECTION ON DEVICE-----------//
+    checkConnection : function() {
+        return true;
+        
+        /*
+        var networkState = navigator.connection.type;
+                var states = {};
+                states[Connection.UNKNOWN]  = 'Unknown connection';
+                states[Connection.ETHERNET] = 'Ethernet connection';
+                states[Connection.WIFI]     = 'WiFi connection';
+                states[Connection.CELL_2G]  = 'Cell 2G connection';
+                states[Connection.CELL_3G]  = 'Cell 3G connection';
+                states[Connection.CELL_4G]  = 'Cell 4G connection';
+                states[Connection.CELL]     = 'Cell generic connection';
+                states[Connection.NONE]     = 'No network connection';
+                if (states[networkState] == 'No network connection') {
+                    return false;
+                } else {
+                    return true;
+                }*/
+           
+    },
+
+    dummyFunction : function() {
+    	
+    },
+
+    //---------------RATE IT NOW------------------//
+    rateIt : function(message,tips,slider) {
+    	var checkConnection = app.checkConnection();
+    	if(checkConnection) {
+    		alert("share message--------->"+message);
+		    alert("user Tips------------->"+tips);	
+		    alert("sliderfill------------>"+slider);
+		    alert("faces------------>"+window.localStorage["faces"]);
+			alert("product------------>"+window.localStorage["product"]);
+			alert("service------------>"+window.localStorage["service"]);	
+			app.hideLoader();
+			window.localStorage.clear();
+    	}else{
+    		app.onOnline();
+    	}	
+    }
 };
 
 app.initialize(); 

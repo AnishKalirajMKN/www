@@ -42,17 +42,17 @@ under the License.
       	    	</div>
   	    		<div class="messages_div m-t-3">
 	            	<div class="ui-grid-b"> 
-	            		<div class="ui-block-a">
+	            		<div class="ui-block-a" id="product-a">
 	            			<span class="img_left"><img src="img/bad.png" alt="bad Logo" class="feedback-icons"/>
 	            				<p class="fbText">Poor</p>
 	            			</span>
 	            		</div> 
-	            		<div class="ui-block-b">
+	            		<div class="ui-block-b" id="product-b">
 	            			<span class="img_center"><img src="img/average.png" alt="bad Logo" class="feedback-icons"/>
 	            				<p class="fbText">Average</p>
 	            			</span>
 	            		</div> 
-				        <div class="ui-block-c">
+				        <div class="ui-block-c" id="product-c">
 				        	<span class=" img_right"><img src="img/happy.png" class="feedback-icons" alt="bad Logo"/>
 				        		<p class="fbText">Great</p>
 				        	</span>
@@ -67,17 +67,17 @@ under the License.
        	    	<div>
   	    		<div class="abc messages_div m-t-3">
 	            	<div class="ui-grid-b"> 
-	            		<div class="ui-block-a">
+	            		<div class="ui-block-a" id="service-a">
 	            			<span class="img_left"><img src="img/bad.png" class="feedback-icons" alt="bad Logo"/>
 	            				<p class="fbText">Poor</p>
 	            			</span>
 	            		</div> 
-	            		<div class="ui-block-b">
+	            		<div class="ui-block-b" id="service-b">
 	            			<span class="img_center"><img src="img/average.png" class="feedback-icons" alt="bad Logo"/>
 	            				<p class="fbText">Average</p>
 	            			</span>
 	            		</div> 
-				        <div class="ui-block-c">
+				        <div class="ui-block-c" id="service-c">
 				        	<span class=" img_right"><img src="img/happy.png" class="feedback-icons" alt="bad Logo"/>
 				        		<p class="fbText">Great</p>
 				        	</span>
@@ -99,7 +99,45 @@ under the License.
 				window.location.href = "faces.html";
 				});
 				$('#fb-down').click(function() {
-					window.location.href = "messages.html";
+					if(window.localStorage["product"] != undefined && window.localStorage["service"] != undefined) {
+					    app.showPage('messages');	
+					}else{
+						navigator.notification.alert('Please select both product & service.', app.dummyFunction(), 'Warning', 'OK');
+						//alert("Please select both product & service.");
+					}					
+				});
+				//-----------------Product Click Function-----------------//
+				$('#product-a').click(function() {
+				    window.localStorage["product"] = "P1";
+				    alert("Poor!!");
+				    //app.showPage('messages');	
+				});
+				$('#product-b').click(function() {					
+				    window.localStorage["product"] = "p2";
+				    alert("Average!!");
+				    //app.showPage('messages');	
+				});
+				$('#product-c').click(function() {
+				    window.localStorage["product"] = "p3";
+				    alert("Great!!");
+				    //app.showPage('messages');	
+				});
+				
+				//-----------------Services Click Function-----------------//
+				$('#service-a').click(function() {
+				    window.localStorage["service"] = "s1";
+				    alert("Poor!!");
+				    //app.showPage('messages');	
+				});
+				$('#service-b').click(function() {
+				    window.localStorage["service"] = "s2";
+				    alert("Average!!");
+				    //app.showPage('messages');	
+				});
+				$('#service-c').click(function() {
+				    window.localStorage["service"] = "s3";
+				    alert("Great!!");
+				    //app.showPage('messages');	
 				});
 			</script>
 		</body>
