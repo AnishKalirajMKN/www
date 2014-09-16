@@ -41,7 +41,7 @@ under the License.
 			</div>
 			<div class="list-view-div">
 				<ul data-role="listview"  data-filter='true' data-icon="false" data-input="#searchTicket" id="list-view" class="list-view" >
-                    <li class="list-next">
+                    <!-- <li class="list-next">
                         <a href="#"> 
                         	<div class="circle list-item-icons"> 
                         	<h2 id="text">37</h2>
@@ -150,7 +150,7 @@ under the License.
                         <p class="magenta_color list-view-text p-l-15">
                             296 Bleeker st(above 5 guys)
                         </p> </a>
-                    </li>
+                    </li> -->
                 </ul>
 			</div>
 			<div data-role="footer" class="page-footer" data-position="fixed">
@@ -190,32 +190,8 @@ under the License.
 			$(function() {
 
 				// --------------------------------- Geo Location API --------------------------------------------------
-				// navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError,{maximumAge: 3000, timeout: 60000, enableHighAccuracy: true});
+				navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError,{maximumAge: 3000, timeout: 60000, enableHighAccuracy: true});
 				// --------------------------------- /Geo Location API --------------------------------------------------
-
-				// --------------------------------- Foursquare API --------------------------------------------------
-				$.ajax({
-					url : "https://api.foursquare.com/v2/venues/search?ll=12.92,80.199&oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914",
-					type : 'POST',
-					crossDomain : true,
-					timeout : 30000,
-					data : JSON.stringify({
-						key : "value"
-					}),
-					error : function(jqXHR) {
-						console.log(error);
-					}
-				}).done(function(data, textStatus, jqXHR) {
-					var result = $.parseJSON(jqXHR.responseText);
-					console.log(result.response.venues[0].categories[0].name);
-					// $.each(data.ticket, function(i, item) {
-					// });
-				});
-				// --------------------------------- /Foursquare API --------------------------------------------------
-			});
-			$('.list-next').click(function() {
-				app.showPage('faces');
-				//window.location.href = "faces.html";
 			});
 		</script>
 	</body>

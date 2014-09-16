@@ -5,8 +5,8 @@
 .close_icon {
 	margin-top: 18px;
 	margin-left: 8px;
-	width: 22px;
-	height: 22px
+	width: 15px;
+	height: 15px
 }
 
 .alphabet_icon {
@@ -17,7 +17,7 @@
 }
 
 .head_text {
-	font-size: 1em;
+	font-size: 0.8em;
 	font-weight: normal;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .m-t-15 {
-	margin-top: -15px;
+	margin-top: 15px;
 }
 
 .m-t-3{
@@ -85,8 +85,8 @@
 }
 .emoticons {
 	margin-top: 21pt !important;
-	width: 86px;
-	height: 86px
+	width: 80px;
+	height: 80px
 }
 
 .m-t--5{
@@ -221,6 +221,9 @@
 }
 .m-b--10{
 	margin-bottom: -10px !important;
+}
+.m-b--7{
+	margin-bottom: -7px !important;
 }
 .m-b--21{
 	margin-bottom: -21px;
@@ -377,7 +380,7 @@
     float: left;
 }
 .happy-logo{
-	margin-top: -10px !important;
+	margin-top: 0px !important;
 }
 .m-b-12{
 	margin-bottom : 12px;
@@ -385,3 +388,7 @@
 .m-b-21{
 	margin-bottom: 21px;
 }
+.m-b-17{
+	margin-bottom: 17px;
+}
+

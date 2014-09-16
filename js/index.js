@@ -38,8 +38,36 @@ var app = {
 	},
 
 	onSuccess : function(position) {
-		alert(position.coords.latitude);
-		alert(position.coords.longitude);
+		window.localStorage["lattitude"] = position.coords.latitude;
+		window.localStorage["longitude"] = position.coords.longitude;
+		// --------------------------------- Foursquare API --------------------------------------------------
+		$.ajax({
+					url : "https://api.foursquare.com/v2/venues/explore?ll="+window.localStorage['lattitude']+","+window.localStorage["longitude"]+"&oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914&radius=1000&sortByDistance=1",
+					type : 'GET',
+					crossDomain : true,
+					timeout : 30000,
+					data : JSON.stringify({
+						key : "value"
+					}),
+					error : function(jqXHR) {
+						console.log(jqXHR);
+					}
+				}).done(function(data, textStatus, jqXHR) {
+					var result = $.parseJSON(jqXHR.responseText);
+					$.each(result.response.groups[0].items, function(i, item) {
+					if(item.venue.name != undefined && item.venue.location.distance != undefined && item.venue.location.address != undefined){
+					$('#list-view').append('<li onclick="app.getShowFaces(\''+item.venue.name+'\');" class="list-next"> <a href="#" class="ui-btn"><div class="circle list-item-icons">'+
+						 '<h2 id="text">'+item.venue.location.distance+'</h2><h2 id="text-m">m</h2></div><h2 class="magenta_color list-view-head p-l-15">'+item.venue.name+'</h2>'+
+						 '<p class="magenta_color list-view-text p-l-15">'+item.venue.location.address+'</p> </a></li>');
+				}
+				});
+				});
+	   // --------------------------------- /Foursquare API --------------------------------------------------
+	},
+	
+	getShowFaces : function(placeName){
+		window.localStorage["placeName"] = placeName;
+		window.location.href = "faces.html";
 	},
 
 	onError : function(error) {
