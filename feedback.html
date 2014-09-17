@@ -33,7 +33,7 @@ under the License.
 			<div data-role="header" class="page-footer" data-position="fixed">
         		<div class="header_center p-t-12 m-b--21">
         			<img src="img/up.png" alt="Up Arrow Logo" id="fb-up" class="up_arrow_img"/>
-        			<h4 class="m-l-10 m-t--5 font-lighter pagination">What did you think of products <br/> and service at Alfred & Constance ?</h4>
+        			<h4 class="m-l-10 m-t--5 font-lighter pagination">What did you think of products <br/> and service at <span id="feedback-name" ></span> ?</h4>
         		</div>
         	</div>
 			<div data-role="content" class="m-t--15">
@@ -43,17 +43,17 @@ under the License.
   	    		<div class="messages_div m-t-3">
 	            	<div class="ui-grid-b"> 
 	            		<div class="ui-block-a" id="product-a">
-	            			<span class="img_left"><img src="img/bad.png" alt="bad Logo" class="feedback-icons"/>
+	            			<span class="img_left" id="productPoor"><img src="img/bad.png" alt="bad Logo" class="feedback-icons"/>
 	            				<p class="fbText">Poor</p>
 	            			</span>
 	            		</div> 
 	            		<div class="ui-block-b" id="product-b">
-	            			<span class="img_center"><img src="img/average.png" alt="bad Logo" class="feedback-icons"/>
+	            			<span class="img_center" id="productAverage"><img src="img/average.png" alt="bad Logo" class="feedback-icons"/>
 	            				<p class="fbText">Average</p>
 	            			</span>
 	            		</div> 
 				        <div class="ui-block-c" id="product-c">
-				        	<span class=" img_right"><img src="img/happy.png" class="feedback-icons" alt="bad Logo"/>
+				        	<span class=" img_right" id="productGreat"><img src="img/happy.png" class="feedback-icons" alt="bad Logo"/>
 				        		<p class="fbText">Great</p>
 				        	</span>
 				        </div> 
@@ -68,26 +68,24 @@ under the License.
   	    		<div class="abc messages_div m-t-3">
 	            	<div class="ui-grid-b"> 
 	            		<div class="ui-block-a" id="service-a">
-	            			<span class="img_left"><img src="img/bad.png" class="feedback-icons" alt="bad Logo"/>
+	            			<span class="img_left" id="servicePoor"><img src="img/bad.png"  class="feedback-icons" alt="bad Logo"/>
 	            				<p class="fbText">Poor</p>
 	            			</span>
 	            		</div> 
 	            		<div class="ui-block-b" id="service-b">
-	            			<span class="img_center"><img src="img/average.png" class="feedback-icons" alt="bad Logo"/>
+	            			<span class="img_center" id="serviceAverage"><img src="img/average.png" class="feedback-icons" alt="bad Logo"/>
 	            				<p class="fbText">Average</p>
 	            			</span>
 	            		</div> 
 				        <div class="ui-block-c" id="service-c">
-				        	<span class=" img_right"><img src="img/happy.png" class="feedback-icons" alt="bad Logo"/>
+				        	<span class=" img_right" id="serviceGreat"><img src="img/happy.png"  class="feedback-icons" alt="bad Logo"/>
 				        		<p class="fbText">Great</p>
 				        	</span>
 				        </div> 
 				   </div>
         		</div>
-				<div data-role="footer" class="page-footer" data-position="fixed">
-					<h5 class="foot_text pagination m-b--10">2 of 3</h5>
-					<img src="img/down.png" alt="Down Arrow Logo" id="fb-down" class="arrow_center down_arrow_img m-b-21"/>
-				</div>
+        		<h5 class="foot_text m-t-15 pagination header_center m-t-20 ui-title">2 of 3</h5>
+				<img src="img/down.png" alt="Down Arrow Logo" id="fb-down" class="arrow_center down_arrow_img m-t--15"/>
 			</div>
 		</div>
 			<script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
@@ -95,6 +93,9 @@ under the License.
 			<script type="text/javascript" src="cordova.js"></script>
 			<script type="text/javascript" src="js/index.js"></script>
 			<script>
+			$(function() {
+				$("#feedback-name").html(window.localStorage["placeName"]);
+			});
 				$('#fb-up').click(function() {
 				window.location.href = "faces.html";
 				});
@@ -109,34 +110,62 @@ under the License.
 				//-----------------Product Click Function-----------------//
 				$('#product-a').click(function() {
 				    window.localStorage["product"] = "P1";
-				    alert("Poor!!");
 				    //app.showPage('messages');	
 				});
 				$('#product-b').click(function() {					
 				    window.localStorage["product"] = "p2";
-				    alert("Average!!");
 				    //app.showPage('messages');	
 				});
 				$('#product-c').click(function() {
 				    window.localStorage["product"] = "p3";
-				    alert("Great!!");
 				    //app.showPage('messages');	
 				});
+				
+					//---------------Animation for Smiley select------//
+		$("#productPoor").click(function(){
+            $("#productPoor").addClass('transition');
+            $("#productAverage").removeClass('transition');
+            $("#productGreat").removeClass('transition');
+        });
+        $("#productAverage").click(function(){
+            $("#productAverage").addClass('transition');
+            $("#productPoor").removeClass('transition');
+            $("#productGreat").removeClass('transition');
+            });
+            $("#productGreat").click(function(){
+            $("#productGreat").addClass('transition');
+            $("#productPoor").removeClass('transition');
+            $("#productAverage").removeClass('transition');
+            });
+        $("#servicePoor").click(function(){
+            $("#servicePoor").addClass('transition');
+            $("#serviceAverage").removeClass('transition');
+            $("#serviceGreat").removeClass('transition');
+        });
+        $("#serviceAverage").click(function(){
+            $("#serviceAverage").addClass('transition');
+            $("#servicePoor").removeClass('transition');
+            $("#serviceGreat").removeClass('transition');
+            });
+            $("#serviceGreat").click(function(){
+            $("#serviceGreat").addClass('transition');
+            $("#servicePoor").removeClass('transition');
+            $("#serviceAverage").removeClass('transition');
+            });
+            
+            //---------------/Animation for Smiley select------//
 				
 				//-----------------Services Click Function-----------------//
 				$('#service-a').click(function() {
 				    window.localStorage["service"] = "s1";
-				    alert("Poor!!");
 				    //app.showPage('messages');	
 				});
 				$('#service-b').click(function() {
 				    window.localStorage["service"] = "s2";
-				    alert("Average!!");
 				    //app.showPage('messages');	
 				});
 				$('#service-c').click(function() {
 				    window.localStorage["service"] = "s3";
-				    alert("Great!!");
 				    //app.showPage('messages');	
 				});
 			</script>

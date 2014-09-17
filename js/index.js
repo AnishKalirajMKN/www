@@ -59,6 +59,7 @@ var app = {
 					$('#list-view').append('<li onclick="app.getShowFaces(\''+item.venue.name+'\');" class="list-next"> <a href="#" class="ui-btn"><div class="circle list-item-icons">'+
 						 '<h2 id="text">'+item.venue.location.distance+'</h2><h2 id="text-m">m</h2></div><h2 class="magenta_color list-view-head p-l-15">'+item.venue.name+'</h2>'+
 						 '<p class="magenta_color list-view-text p-l-15">'+item.venue.location.address+'</p> </a></li>');
+				app.hideLoader();
 				}
 				});
 				});

@@ -43,11 +43,18 @@
 }
 
 .p-t-50 {
-	padding-top: 50px !important;
+	padding-top: 40px !important;
 }
 
 .p-t-12 {
 	padding-top: 12px;
+}
+
+.transition {
+    -webkit-transform: scale(1.4) !important; 
+    -moz-transform: scale(1.4) !important;
+    -o-transform: scale(1.4) !important;
+    transform: scale(1.4) !important;
 }
 
 
@@ -84,9 +91,9 @@
 	float: left
 }
 .emoticons {
-	margin-top: 21pt !important;
-	width: 80px;
-	height: 80px
+	margin-top: 13pt !important;
+	width: 85px;
+	height: 85px
 }
 
 .m-t--5{
@@ -96,7 +103,6 @@
 .foot_text {
 	font-size: 0.8em !important;
 	font-weight: lighter !important;
-	margin-top: 0 !important;
 }
 
 .page-footer {
@@ -229,7 +235,7 @@
 	margin-bottom: -21px;
 }
 .m-t--15{
-	margin-top:-15px;
+	margin-top:-15px !important;
 }
 .list-footer-icons {
 	width: 32px;
@@ -390,5 +396,9 @@
 }
 .m-b-17{
 	margin-bottom: 17px;
+}
+
+.bottom-13{
+	bottom: -13px !important
 }
 
