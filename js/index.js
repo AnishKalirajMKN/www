@@ -35,11 +35,15 @@ var app = {
 	// function, we must explicitly call 'app.receivedEvent(...);'
 	onDeviceReady : function() {
 		// navigator.geolocation.watchPosition();  getCurrentPosition
+		app.onSuccess();
 	},
 
 	onSuccess : function(position) {
-		window.localStorage["lattitude"] = position.coords.latitude;
-		window.localStorage["longitude"] = position.coords.longitude;
+		// window.localStorage["lattitude"] = position.coords.latitude;
+		// window.localStorage["longitude"] = position.coords.longitude;
+		
+		window.localStorage["lattitude"] = 13.075661;
+		window.localStorage["longitude"] = 80.224583;
 		// --------------------------------- Foursquare API --------------------------------------------------
 		$.ajax({
 					url : "https://api.foursquare.com/v2/venues/explore?ll="+window.localStorage['lattitude']+","+window.localStorage["longitude"]+"&oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914&radius=1000&sortByDistance=1",
