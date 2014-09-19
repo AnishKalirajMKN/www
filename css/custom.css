@@ -75,6 +75,7 @@
 	margin-top: 2px !important;
 }
 
+
 .m-t-0{
 	margin-top: 0px !important;
 }
@@ -114,7 +115,7 @@
 }
 
 .up_arrow_img{
-	height: 15px;
+	height: 25px;
     padding-bottom: 5px;
 }
 .down_arrow_img{
@@ -165,10 +166,14 @@
 	background-color: #ffffff;
 }
 
+.a-tag{
+	background-color: transparent !important;
+}
+
 /*  *******************************************Overriding the Slider CSS property******************************************  */
 
 .ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head + body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head + body .ui-btn.ui-btn-a:visited {
-	background-color: #54c5c3 !important;
+	background-color: #54c5c3;
 }
 
 .ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head + body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active {
@@ -347,6 +352,9 @@
 	padding-left: 20px;
     padding-top: 55px;
     padding-bottom: 55px;
+}
+.float-left{
+	float:left;
 }
 .fbText{
 	text-align:center;

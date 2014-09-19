@@ -60,7 +60,7 @@ var app = {
 					var result = $.parseJSON(jqXHR.responseText);
 					$.each(result.response.groups[0].items, function(i, item) {
 					if(item.venue.name != undefined && item.venue.location.distance != undefined && item.venue.location.address != undefined){
-					$('#list-view').append('<li onclick="app.getShowFaces(\''+item.venue.name+'\');" class="list-next"> <a href="#" class="ui-btn"><div class="circle list-item-icons">'+
+					$('#list-view').append('<li onclick="app.getShowFaces(\''+item.venue.name+'\');" class="list-next"> <a href="#faces-page" data-transition="slide" class="ui-btn"><div class="circle list-item-icons">'+
 						 '<h2 id="text">'+item.venue.location.distance+'</h2><h2 id="text-m">m</h2></div><h2 class="magenta_color list-view-head p-l-15">'+item.venue.name+'</h2>'+
 						 '<p class="magenta_color list-view-text p-l-15">'+item.venue.location.address+'</p> </a></li>');
 				app.hideLoader();
@@ -72,7 +72,9 @@ var app = {
 	
 	getShowFaces : function(placeName){
 		window.localStorage["placeName"] = placeName;
-		window.location.href = "faces.html";
+		$("#place-name").html(window.localStorage["placeName"]);
+		$("#feedback-name").html(window.localStorage["placeName"]);
+		// window.location.href = "faces.html";
 	},
 
 	onError : function(error) {

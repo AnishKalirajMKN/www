@@ -29,7 +29,8 @@ under the License.
 		<title>Rate It</title>
 	</head>
 	<body class="body-bg">
-		<div data-role="page">
+		<!-- ------------------------------------- HOME PAGE ------------------------------------------------------ -->
+		<div data-role="page" id="home-page">
 			<div data-role="header" class="index-header" data-position="fixed">
 				<img src="img/alphabet.png" alt="Alphabet logo"class="alphabet_icon float_right"/>
 				<div class="header_center">
@@ -40,8 +41,7 @@ under the License.
 				<input name="search-1" id="searchTicket"  value="" type="search" placeholder="Search nearby shops,restaurants">
 			</div>
 			<div class="list-view-div">
-				<ul data-role="listview"  data-filter='true' data-icon="false" data-input="#searchTicket" id="list-view" class="list-view" >
-                </ul>
+				<ul data-role="listview"  data-filter='true' data-icon="false" data-input="#searchTicket" id="list-view" class="list-view" ></ul>
 			</div>
 			<div data-role="footer" class="page-footer" data-position="fixed">
 				<div class="ui-grid-c p-b-15">
@@ -72,6 +72,192 @@ under the License.
 				</div><!-- /grid-b -->
 			</div>
 		</div>
+		<!-- ------------------------------------- /HOME PAGE ------------------------------------------------------ -->
+
+		<!-- ------------------------------------- FACES PAGE ------------------------------------------------------ -->
+		<div data-role="page" id="faces-page">
+			<div data-role="header" class="page-footer" data-position="fixed">
+				<a href="#home-page" data-transition="slide" data-direction="reverse" class="a-tag"><img src="img/close_button1.png" alt="Low resolution logo" class="close_icon float_left"/></a>
+				<div class="header_center m-t-15">
+					<span class="head_text">How do you rate</span>
+					<span class="head_text" id="place-name"></span>
+				</div>
+			</div>
+			<div data-role="content">
+				<div  id="veryHappy">
+					<a href="#feedback-page" data-transition="slide"> <img src="img/very_happy.png" class="emoticons logo_alignment happy-logo" alt="Very Happy Logo"/></a>
+				</div>
+				<div id="happy">
+					<a href="#feedback-page" data-transition="slide"> <img src="img/happy.png" class="emoticons logo_alignment" alt="Happy Logo"/></a>
+				</div>
+				<div id="bad">
+					<a href="#feedback-page" data-transition="slide"> <img src="img/bad.png" class="emoticons logo_alignment" alt="Bad logo"/></a>
+				</div>
+				<div  id="terrible">
+					<a href="#feedback-page" data-transition="slide"> <img src="img/terrible.png" class="emoticons logo_alignment" alt="Terrible logo"/></a>
+					<!-- <h5 class="foot_text">1 of 3</h5> -->
+				</div>
+				<h5 class="foot_text m-t-15 pagination header_center m-t-20 ui-title">1 of 3</h5>
+				<a href="#feedback-page" data-transition="slide"> <img src="img/down.png" alt="Down Arrow Logo" id="faces_down" class="arrow_center down_arrow_img m-t--15"/></a>
+			</div>
+		</div>
+		<!-- ------------------------------------- /FACES PAGE ------------------------------------------------------ -->
+
+		<!-- ------------------------------------- FEEDBACK PAGE ------------------------------------------------------ -->
+		<div data-role="page" id="feedback-page">
+			<div data-role="header" class="page-footer" data-position="fixed">
+				<a href="#faces-page" data-transition="slide" data-direction="reverse" class="a-tag"><img src="img/left.png" alt="Up Arrow Logo" id="faces_up" class="up_arrow_img m-l-10 m-t-20"/></a>
+				<div class="header_center m-t-15">
+					<span class="head_text">What did you think of products
+						<br/>
+						and service at </span>
+					<span class="head_text" id="feedback-name"></span>
+				</div>
+				<!--
+				<div class="header_center p-t-12 m-b--21">
+				<a href= "#faces-page"> <img src="img/up.png" alt="Up Arrow Logo" id="fb-up" class="up_arrow_img"/> </a>
+				<h4 class="m-l-10 m-t--5 font-lighter pagination">What did you think of products
+				<br/>
+				and service at <span id="feedback-name" ></span> ?</h4>
+				</div>-->
+
+			</div>
+			<div data-role="content" class="">
+				<div data-role="header" class="feedback_header m-b-6"><img class="products-icons" src="img/products.png">
+					<span class="headerText">Products</span>
+				</div>
+				<div class="messages_div m-t-3">
+					<div class="ui-grid-b">
+						<div class="ui-block-a" id="product-a">
+							<span class="img_left" id="productPoor"><img src="img/bad.png" alt="bad Logo" class="feedback-icons"/>
+								<p class="fbText">
+									Poor
+								</p> </span>
+						</div>
+						<div class="ui-block-b" id="product-b">
+							<span class="img_center" id="productAverage"><img src="img/average.png" alt="bad Logo" class="feedback-icons"/>
+								<p class="fbText">
+									Average
+								</p> </span>
+						</div>
+						<div class="ui-block-c" id="product-c">
+							<span class=" img_right" id="productGreat"><img src="img/happy.png" class="feedback-icons" alt="bad Logo"/>
+								<p class="fbText">
+									Great
+								</p> </span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="content" class="m-t--15">
+				<div data-role="header" class="feedback_header m-b-6"><img src="img/service.png" class="products-icons">
+					<span class="headerText">Service</span>
+				</div>
+				<div>
+					<div class="abc messages_div m-t-3">
+						<div class="ui-grid-b">
+							<div class="ui-block-a" id="service-a">
+								<span class="img_left" id="servicePoor"><img src="img/bad.png"  class="feedback-icons" alt="bad Logo"/>
+									<p class="fbText">
+										Poor
+									</p> </span>
+							</div>
+							<div class="ui-block-b" id="service-b">
+								<span class="img_center" id="serviceAverage"><img src="img/average.png" class="feedback-icons" alt="bad Logo"/>
+									<p class="fbText">
+										Average
+									</p> </span>
+							</div>
+							<div class="ui-block-c" id="service-c">
+								<span class=" img_right" id="serviceGreat"><img src="img/happy.png"  class="feedback-icons" alt="bad Logo"/>
+									<p class="fbText">
+										Great
+									</p> </span>
+							</div>
+						</div>
+					</div>
+					<h5 class="foot_text m-t-15 pagination header_center m-t-20 ui-title">2 of 3</h5>
+					<a href= "#messages-page" data-transition="slide"><img src="img/down.png" alt="Down Arrow Logo" id="fb-down" class="arrow_center down_arrow_img m-t--15"/> </a>
+				</div>
+			</div>
+		</div>
+		<!-- ------------------------------------- /FEEDBACK PAGE ------------------------------------------------------ -->
+
+		<!-- ------------------------------------- MESSAGE PAGE ------------------------------------------------------ -->
+
+		<div data-role="page" id="messages-page">
+			<div data-role="header" class="page-footer" data-position="fixed">
+				<a href="#feedback-page" data-transition="slide" data-direction="reverse" class="a-tag"> <img src="img/left.png" alt="Up Arrow Logo" id="faces_up" class="up_arrow_img m-l-10 m-t-7"/> </a>
+				<div class="ui-grid-b ">
+					<div class="ui-block-a">
+
+					</div>
+					<div class="ui-block-b">
+
+					</div>
+					<div class="ui-block-c"><img src="img/camera.png" alt="Camera Arrow Logo" id="faces_up" class="float_right m-t-10 icon-size m-r-10"/>
+					</div>
+
+				</div><!-- /grid-b -->
+			</div>
+			<div data-role="content">
+				<div class="messages_div m-t-10 box-padding">
+					<img src="img/message.png" alt="Messages Logo" class="float_right m-t-10 icon-size"/>
+					<div class="float_left m-t-8">
+						<h5 class="m-l-10 magenta_color font_normal">OPTIONAL</h5>
+						<h5 class="m-l-10 m-t-15 font_normal">Any messages to share?</h5>
+					</div>
+					<br />
+					<br />
+					<br />
+					<br />
+					<div class="m-l-10 m-r-10 m-t-10">
+						<input type="text" id="direct-message" placeholder="Direct Message to the manager" />
+					</div>
+					<div class="m-l-10 m-r-10 m-t-25 p-b-25">
+						<input type="text" id="tips" placeholder="Tips for other users" />
+					</div>
+				</div>
+				<div class="nps_div m-t-25 box-padding">
+					<img src="img/nps.png" alt="NPS Logo" class="float_right m-t-10 icon-size"/>
+					<div class="float_left m-t-8">
+						<h5 class="m-l-10 magenta_color font_normal">OPTIONAL</h5>
+						<h5 class="m-l-10 m-t-15 font_normal">How likely are you to
+						<br/>
+						recommend them to a friend?</h5>
+					</div>
+					<br />
+					<br />
+					<br />
+					<br />
+					<label>
+						<br/>
+					</label>
+					<input type="range" name="slider-fill" id="slider-fill" value="5" min="0" max="10" data-highlight="true" />
+					<div class="ui-grid-b foot_text p-t-50">
+						<div class="ui-block-a">
+							<span>Not Likely</span>
+						</div>
+						<div class="ui-block-b header_center">
+							<span>Neutral</span>
+						</div>
+						<div class="ui-block-c">
+							<span class="float_right">Very Likely</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-transition="slide" class="page-footer" data-position="fixed">
+				<h5 class="foot_text pagination">3 of 3</h5>
+				<div class="register-div">
+					<img id="rateIt"src="img/rateit-button.png" alt="Rate it Logo" class="register-button"/>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- ------------------------------------- /MESSAGE PAGE ------------------------------------------------------ -->
+
 		<script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
 		<script type="text/javascript" src="./js/jquery.mobile-git.js"></script>
 		<script type="text/javascript" src="cordova.js"></script>
@@ -79,9 +265,119 @@ under the License.
 		<script>
 			$(function() {
 				app.showLoader();
+
 				// --------------------------------- Geo Location API --------------------------------------------------
 				// navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError,{maximumAge: 3000, timeout: 60000, enableHighAccuracy: true});
 				// --------------------------------- /Geo Location API --------------------------------------------------
+
+				// ----------------------------------- Functions for pages div -----------------------------------------
+
+				$('#veryHappy').click(function() {
+					window.localStorage["faces"] = 1;
+				});
+				$('#happy').click(function() {
+					window.localStorage["faces"] = 2;
+				});
+				$('#bad').click(function() {
+					window.localStorage["faces"] = 3;
+				});
+				$('#terrible').click(function() {
+					window.localStorage["faces"] = 4;
+				});
+				// ----------------------------------- Functions for pages div -----------------------------------------
+
+				// ----------------------------------- Functions for feeback div -----------------------------------------
+
+				$('#fb-down').click(function() {
+					if (window.localStorage["product"] != undefined && window.localStorage["service"] != undefined) {
+					} else {
+						navigator.notification.alert('Please select both product & service.', app.dummyFunction(), 'Warning', 'OK');
+						//alert("Please select both product & service.");
+					}
+				});
+
+				//---------------Animation for Smiley select------//
+				$("#productPoor").click(function() {
+					$("#productPoor").addClass('transition');
+					$("#productAverage").removeClass('transition');
+					$("#productGreat").removeClass('transition');
+				});
+				$("#productAverage").click(function() {
+					$("#productAverage").addClass('transition');
+					$("#productPoor").removeClass('transition');
+					$("#productGreat").removeClass('transition');
+				});
+				$("#productGreat").click(function() {
+					$("#productGreat").addClass('transition');
+					$("#productPoor").removeClass('transition');
+					$("#productAverage").removeClass('transition');
+				});
+				$("#servicePoor").click(function() {
+					$("#servicePoor").addClass('transition');
+					$("#serviceAverage").removeClass('transition');
+					$("#serviceGreat").removeClass('transition');
+				});
+				$("#serviceAverage").click(function() {
+					$("#serviceAverage").addClass('transition');
+					$("#servicePoor").removeClass('transition');
+					$("#serviceGreat").removeClass('transition');
+				});
+				$("#serviceGreat").click(function() {
+					$("#serviceGreat").addClass('transition');
+					$("#servicePoor").removeClass('transition');
+					$("#serviceAverage").removeClass('transition');
+				});
+
+				//---------------/Animation for Smiley select------//
+
+				//-----------------Product Click Function-----------------//
+				$('#product-a').click(function() {
+					window.localStorage["product"] = "P1";
+					//app.showPage('messages');
+				});
+				$('#product-b').click(function() {
+					window.localStorage["product"] = "p2";
+					//app.showPage('messages');
+				});
+				$('#product-c').click(function() {
+					window.localStorage["product"] = "p3";
+					//app.showPage('messages');
+				});
+				//----------------- /Product Click Function-----------------//
+
+				//-----------------Services Click Function-----------------//
+				$('#service-a').click(function() {
+					window.localStorage["service"] = "s1";
+					//app.showPage('messages');
+				});
+				$('#service-b').click(function() {
+					window.localStorage["service"] = "s2";
+					//app.showPage('messages');
+				});
+				$('#service-c').click(function() {
+					window.localStorage["service"] = "s3";
+					//app.showPage('messages');
+				});
+
+				//-----------------/Services Click Function-----------------//
+
+				// ----------------------------------- /Functions for feeback div -----------------------------------------
+
+				// ----------------------------------- Scripts for feeback div -----------------------------------------
+				$('#rateIt').click(function() {
+					var shareMessage = $('#direct-message').val();
+					var userTips = $('#tips').val();
+					var sliderfill = $('#slider-fill').val();
+					if (shareMessage != '' && userTips != '') {
+						app.showLoader();
+						$('#direct-message').val('');
+						$('#tips').val('');
+						$('#slider-fill').val('5');
+						$("#slider-fill").slider("refresh");
+						app.rateIt(shareMessage, userTips, sliderfill);
+					}
+				});
+				// ----------------------------------- /Scripts for feeback div -----------------------------------------
 			});
 		</script>
 	</body>
