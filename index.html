@@ -24,6 +24,7 @@ under the License.
 		<meta name="msapplication-tap-highlight" content="no" />
 		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" href="./css/photoswipe.css">
 		<link rel="stylesheet" href="./css/jquery.mobile-git.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css" />
 		<title>Rate It</title>
@@ -47,20 +48,21 @@ under the License.
 				<div class="ui-grid-c p-b-15">
 					<div class="ui-block-a">
 						<div class="header_center">
-							<img src="img/rateit.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
-							<span class="icon-text">Rate It</span>
+							<a href="#status-page" data-transition="slideup"><img src="img/rateit.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/> <span class="icon-text">Rate It</span></a>
 						</div>
 					</div>
 					<div class="ui-block-b">
 						<div class="header_center">
-							<img src="img/discover.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<a href="#discover-page" data-transition="slideup"><img src="img/discover.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
 							<span class="icon-text">Discover</span>
+							</a>
 						</div>
 					</div>
 					<div class="ui-block-c">
 						<div class="header_center">
-							<img src="img/notification.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<a href="#notification-page" data-transition="slideup"><img src="img/notification.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
 							<span class="icon-text">Notifications</span>
+							</a>
 						</div>
 					</div>
 					<div class="ui-block-d">
@@ -77,7 +79,7 @@ under the License.
 		<!-- ------------------------------------- FACES PAGE ------------------------------------------------------ -->
 		<div data-role="page" id="faces-page">
 			<div data-role="header" class="page-footer" data-position="fixed">
-				<a href="#home-page" data-transition="slide" data-direction="reverse" class="a-tag"><img src="img/close_button1.png" alt="Low resolution logo" class="close_icon float_left"/></a>
+				<a href="#home-page" data-transition="slide" data-direction="reverse" class="a-tag"><img src="img/close_button1.png" alt="Low resolution logo" class="close_icon float-left"/></a>
 				<div class="header_center m-t-15">
 					<span class="head_text">How do you rate</span>
 					<span class="head_text" id="place-name"></span>
@@ -203,7 +205,7 @@ under the License.
 			<div data-role="content">
 				<div class="messages_div m-t-10 box-padding">
 					<img src="img/message.png" alt="Messages Logo" class="float_right m-t-10 icon-size"/>
-					<div class="float_left m-t-8">
+					<div class="float-left m-t-8">
 						<h5 class="m-l-10 magenta_color font_normal">OPTIONAL</h5>
 						<h5 class="m-l-10 m-t-15 font_normal">Any messages to share?</h5>
 					</div>
@@ -220,7 +222,7 @@ under the License.
 				</div>
 				<div class="nps_div m-t-25 box-padding">
 					<img src="img/nps.png" alt="NPS Logo" class="float_right m-t-10 icon-size"/>
-					<div class="float_left m-t-8">
+					<div class="float-left m-t-8">
 						<h5 class="m-l-10 magenta_color font_normal">OPTIONAL</h5>
 						<h5 class="m-l-10 m-t-15 font_normal">How likely are you to
 						<br/>
@@ -250,7 +252,7 @@ under the License.
 			<div data-role="footer" data-transition="slide" class="page-footer" data-position="fixed">
 				<h5 class="foot_text pagination">3 of 3</h5>
 				<div class="register-div">
-					<img id="rateIt"src="img/rateit-button.png" alt="Rate it Logo" class="register-button"/>
+					<a href="#status-page"><img id="rateIt"src="img/rateit-button.png" alt="Rate it Logo" class="register-button"/></a>
 				</div>
 
 			</div>
@@ -258,14 +260,314 @@ under the License.
 
 		<!-- ------------------------------------- /MESSAGE PAGE ------------------------------------------------------ -->
 
+		<!-- ------------------------------------- RATE IT PAGE ------------------------------------------------------ -->
+		<div data-role="page" class="color-white" id="status-page">
+			<div data-role="header" class="page-footer" data-position="fixed">
+				<a href="#home-page" data-transition="slide" data-direction="reverse" class="a-tag"> <img src="img/left.png" alt="Up Arrow Logo" id="faces_up" class="status_arrow_img"/> </a>
+				<div class="status-header m-l-16 m-b-6 p-t-12 header_center">
+					YOUR STATUS
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="m-t--15">
+					<div class="ui-grid-b">
+						<div class="ui-block-a width-40 m-t-15 color-ash status-text left-raidus-border">
+							<span class="textcolor-ce m-t-3 float_right m-r-10">Influencer</span>
+						</div>
+						<div class="ui-block-b width-30 m-t-15 color-ash m-l-5 status-text">
+							<span class="textcolor-ce m-t-3 float_right m-r-10">Gold</span>
+						</div>
+						<div class="ui-block-c width-30 m-t-15 color-ash m-l-5 status-text right-raidus-border">
+							<span class="textcolor-ce m-t-3 float_right m-r-10">Elite</span>
+						</div>
+					</div>
+				</div>
+				<hr color="#f6f6f6" align="left" width="100%" class="m-t-20">
+				<div class="pagination head_text">
+					<div class="float_right m-l-5">
+						<span class="m-r-3">Learn More</span>
+						<a href="#"><img src="img/right-arrow.png" alt="Messages Logo"/></a>
+					</div>
+				</div>
+				<div class="status-subheader m-t-33">
+					<div class="p-t-20 status-subtext m-l-5">
+						WHAT OTHERS SAID HERE
+					</div>
+				</div>
+				<div class="ui-grid-b my-breakpoint m-t-15">
+					<div class="ui-block-a"><img src="img/message.png" alt="Messages Logo" class="float-left m-t-10 m-l-5"/>
+					</div>
+					<div class="ui-block-b">
+						<div class="head_text magenta_color">
+							RESTAURANT
+						</div>
+						<div class="status-name">
+							Alfred & Constance
+						</div>
+						<div class="status-address">
+							130 Constance Street, Fortitude Valley
+						</div>
+					</div>
+					<div class="ui-block-c">
+						<img class="up_arrow_img m-l-10 m-t-25" id="faces_up" alt="Up Arrow Logo" src="img/right.png">
+					</div>
+				</div>
+				<div class="status-subheader">
+					<p class="p-t-20 status-subtext m-l-5">
+						OTHER PLACES YOU MAY LIKE
+					</p>
+				</div>
+				<div id="Gallery">
+
+					<div class="gallery-row">
+
+						<div class="gallery-item">
+							<a href="img/full/001.jpg" rel=external><img src="img/thumb/001.jpg" alt="Image 001" /></a>
+							<div class="m-l-10">
+								<div class="status-image-header magenta_color p-t-12">
+									COFFEE SHOP
+								</div>
+								<div class="status-image-name">
+									Starbucks
+								</div>
+								<div class="status-address">
+									130 Constance Street, Fortitude Valley
+								</div>
+							</div>
+						</div>
+
+						<div class="gallery-item">
+							<a href="img/full/002.jpg" rel=external><img src="img/thumb/002.jpg" alt="Image 002" /></a>
+							<div class="m-l-10">
+								<div class="status-image-header magenta_color p-t-12">
+									BURGERS
+								</div>
+								<div class="status-image-name">
+									Shake Shack
+								</div>
+								<div class="status-address">
+									130 Constance Street, Fortitude Valley
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div data-role="footer" class="page-footer" data-position="fixed">
+				<div class="ui-grid-c p-b-15">
+					<div class="ui-block-a">
+						<div class="header_center">
+							<a href="#status-page" data-transition="slideup"><img src="img/rateit.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/> <span class="icon-text">Rate It</span></a>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div class="header_center">
+							<a href="#discover-page" data-transition="slideup"><img src="img/discover.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<span class="icon-text">Discover</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-c">
+						<div class="header_center">
+							<a href="#notification-page" data-transition="slideup"><img src="img/notification.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<span class="icon-text">Notifications</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-d">
+						<div class="header_center">
+							<img src="img/me.png" alt="Alphabet logo"class="arrow_center list-footer-icons list-footer-icons-me"/>
+							<span class="icon-text">Me</span>
+						</div>
+					</div>
+				</div><!-- /grid-b -->
+			</div>
+		</div>
+		<!-- ------------------------------------- /STATUS PAGE ------------------------------------------------------ -->
+		
+		<!-- ------------------------------------- DISCOVER PAGE ------------------------------------------------------ -->
+		<div data-role="page" id="discover-page">
+            <div data-position="fixed" class="discover-header ui-header ui-bar-inherit ui-header-fixed slidedown" data-role="header" role="banner">
+                <div class="header_center">
+                    <h2 class="discover-header-font">Our Pics</h2>
+                    <h4 class="m-t--3 head_text discover-header2">New York, NY</h4>
+                </div>
+               </div>
+                <!-- Content Images -->
+	            <div class="discover-img">
+        	      	<a href="#photofeed-page" data-transition="slide"><img class="restaurant-img1 m-t--17" src="img/restuatant1.jpg"></a>
+	    	        <div>
+						<div class="ui-grid-b">
+							<div class="ui-block-a">
+								<span>
+									<a href="#photofeed-page" data-transition="slide"><img src="img/discover1.jpg" alt="restuarant-img" class="discover-sm-img1 m-t-5p"></a>
+								</span>
+							</div>
+							<div class="ui-block-b">
+								<span>
+									<a href="#photofeed-page" data-transition="slide"><img src="img/discover2.jpg" alt="restuarant-img" class="discover-sm-img2 m-t-5p"></a>
+								</span>
+							</div>
+							<div class="ui-block-c">
+								<span>
+									<a href="#photofeed-page" data-transition="slide"><img src="img/discover3.jpg" alt="restuarant-img" class="discover-sm-img3 m-t-5p"></a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- End of Images-->
+				<!--Address -->
+				<div data-role="content" class="adress-div">
+						<span class="discover-text1">RESTAURANT</span>
+						<span class="discover-text2">Alfred & Constance</span>
+						<span>
+							<img src="img/very_happy.png" style="float: right;height: 45;"/>
+						</span>	
+						<span class="discover-text3">130 constance street, Fortunate Valley</span>
+						<span class="discover-text4">OLD 4006, Australia</span>
+				</div>
+				<div data-role="content" class="ui-grid-b">
+					<div class="ui-block-a">
+						<a href="#" class="ui-btn buttonDiscover1">
+							<div class="circle-small"></div>
+							 Rate It Now
+						</a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn buttonDiscover2">
+							<div class="circle-small"></div>
+							Been there
+						</a>
+					</div>
+					<div class="ui-block-c">
+						<a href="#" class="ui-btn buttonDiscover3">
+							<div class="circle-small"></div>
+							Want to go
+						</a>
+					</div>
+				</div>
+					
+				<!--End of address-->
+				<!-- Footer -->
+				<div data-role="footer" class="page-footer" data-position="fixed">
+				<div class="ui-grid-c p-b-15">
+					<div class="ui-block-a">
+						<div class="header_center">
+							<a href="#status-page" data-transition="slideup"><img src="img/rateit.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/> <span class="icon-text">Rate It</span></a>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div class="header_center">
+							<a href="#discover-page" data-transition="slideup"><img src="img/discover.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<span class="icon-text">Discover</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-c">
+						<div class="header_center">
+							<a href="#notification-page" data-transition="slideup"><img src="img/notification.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+							<span class="icon-text">Notifications</span>
+							</a>
+						</div>
+					</div>
+					<div class="ui-block-d">
+						<div class="header_center">
+							<img src="img/me.png" alt="Alphabet logo"class="arrow_center list-footer-icons list-footer-icons-me"/>
+							<span class="icon-text">Me</span>
+						</div>
+					</div>
+				</div><!-- /grid-b -->
+			</div>
+				<!-- End of Footer -->    
+    	    
+	    	</div>
+		<!-- ------------------------------------- /DISCOVER PAGE ------------------------------------------------------ -->
+		
+		<!-- ------------------------------------- PHOTO FEED PAGE ------------------------------------------------------ -->
+		<div data-role="page" id="photofeed-page">
+            <div data-position="fixed" class="photofeed-header ui-header ui-bar-inherit ui-header-fixed slidedown" data-role="header" role="banner">
+            	<a href="#discover-page" data-transition="slide" data-direction="reverse" class="a-tag"> <img src="img/left.png" alt="Up Arrow Logo" id="faces_up" class="up_arrow_img m-l-10 m-t-7"/> </a>
+                <div class="header_center">
+                    <h2 class="discover-header-font">1 / 210</h2>
+                </div>
+               </div>
+                <!-- Content Images -->
+	            <div class="discover-img">
+        	      	<img class="restaurant-img1 m-t--34" src="img/coffeeshop.jpg">
+				</div>
+				<div data-role="content">
+					<div class="photofeed-text1">User123</div>
+					<div class="photofeed-text2">
+						Ambitioni dedisse scripsisse iudicaretur. Prima luce, cum quibus mons aliud consensu ab eo.Donec sed odio operae, eu vuilputate felis rhoncus. At noshric posthac, sitientis piros Afros.
+					</div>
+			    </div>
+			    <div class="discover-img">
+        	      	<img class="restaurant-img1 m-t--34" src="img/coffeeshop2.jpg">
+				</div>
+				<!-- End of Images-->
+				<!-- Footer -->
+				<div data-role="footer" class="page-footer" data-position="fixed">
+					<div class="ui-grid-c p-b-15">
+						<div class="ui-block-a">
+							<div class="header_center">
+								<img src="img/rateit.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+								<span class="icon-text">Rate It</span>
+							</div>
+						</div>
+						<div class="ui-block-b">
+							<div class="header_center">
+								<img src="img/discover.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+								<span class="icon-text">Discover</span>
+							</div>
+						</div>
+						<div class="ui-block-c">
+							<div class="header_center">
+								<img src="img/notification.png" alt="Alphabet logo"class="arrow_center list-footer-icons"/>
+								<span class="icon-text">Notifications</span>
+							</div>
+						</div>
+						<div class="ui-block-d">
+							<div class="header_center">
+								<img src="img/me.png" alt="Alphabet logo"class="arrow_center list-footer-icons list-footer-icons-me"/>
+								<span class="icon-text">Me</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End of Footer -->    
+			
+	   	</div>
+		<!-- ------------------------------------- /PHOTO FEED PAGE ------------------------------------------------------ -->
+		
+		
+		
 		<script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
 		<script type="text/javascript" src="./js/jquery.mobile-git.js"></script>
+		<script type="text/javascript" src="./js/simple-inheritance.min.js"></script>
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="./js/code-photoswipe-1.0.11.min.js"></script>
 		<script>
 			$(function() {
-				app.showLoader();
 
+				/* ------------------------------------------------ PHOTO SWIPE ------------------------------------------ */
+				$(document).ready(function() {
+					$("#Gallery a").photoSwipe();
+				});
+				document.addEventListener('DOMContentLoaded', function() {
+
+					Code.photoSwipe('a', '#Gallery');
+
+				}, false);
+				/* ------------------------------------------------ PHOTO SWIPE ------------------------------------------ */
+				
+				app.showLoader();
+				$('#rate-it').click(function() {
+					window.location.href = "status.html"
+				});
 				// --------------------------------- Geo Location API --------------------------------------------------
 				// navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError,{maximumAge: 3000, timeout: 60000, enableHighAccuracy: true});
 				// --------------------------------- /Geo Location API --------------------------------------------------
