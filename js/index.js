@@ -66,8 +66,15 @@ var app = {
 				app.hideLoader();
 				}
 				});
+				$('.list-view').append('<div class="list-next no-record-div" >'+
+				'<a href="#add-new-page" data-transition="slide"><img class="arrow-right"  src="img/right.png"></a>'+
+				'<span class="magenta_color list-view-head p-l-71">No Record?</span>'+
+				'<p class="magenta_color list-view-text-color p-l-71 p-t-8">Add a place under 3 secs</p></div>'
+				);
 				});
 	   // --------------------------------- /Foursquare API --------------------------------------------------
+	   
+
 	},
 	
 	getShowFaces : function(placeName){

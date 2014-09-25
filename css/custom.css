@@ -554,6 +554,10 @@ div.gallery-item img { display: block; width: 100%; height: auto; }
 	padding-left: 71px;
 }
 
+.list-view-notification > li > .ui-btn {
+	background-color: #ffffff !important;
+}
+
 .no-record-div {
 	background-color: #ffffff ! important;
 	height: 50px;
@@ -565,14 +569,7 @@ div.gallery-item img { display: block; width: 100%; height: auto; }
     font-size: 0.7em !important;
     margin-top: -9px !important;
 }
-.arrow-right {
-	height: 40;
-	width:40;
-	float: right;
-	-ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);
-}
+
 .head_text_addNew {
 	font-size: 1em;
 	font-weight: normal;
@@ -691,25 +688,62 @@ div.gallery-item img { display: block; width: 100%; height: auto; }
 	border-colour: none;
 }
 
-.m-t-1.5 {
-	margin-top : 1.5px ;
+.m-t-3-imp {
+	margin-top : 3px ! important;
 }
 
 .m-b-2 {
     margin-bottom: 2px;
 }
-
-.font-bold {
-    font-size: 1em;
-    font-weight: 500;
-}
-
 .ui-btn-noborder { 
 	border: none !important; 
 }
 
+.p-t-20 {
+    padding-top: 20px ! important;
+}
 
-/*---------------------------/RAM---------------------------------*/	
+.font-size-0.9 {
+    font-size: 0.9em;
+}
+
+.p-b-8 {
+    padding-bottom: 8px;
+}
+
+.font-size-17 {
+    font-size: 17px !important;
+}
+
+.font-normal-important {
+	font-weight: normal !important;
+}
+
+.arrow-right {
+    float: right;
+    height: 19px;
+    margin-right: 15px;
+    margin-top: 7px;
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    width: 18px;
+}
+
+.font-siz-17 {
+    font-size: 17px;
+}
+
+.m-t-42 {
+    margin-top: 42px;
+}
+
+.head-text-notification {
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+/*---------------------------/RAM---------------------------------*/		
 /** Discover Lakshan **/
 .discover-header{
 	background-color: #8499a5 !important;
