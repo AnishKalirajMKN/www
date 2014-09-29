@@ -557,17 +557,17 @@ under the License.
 				</div>
 				<div class="messages_div m-t-3">
 					<div class="ui-grid-c m-t-70-">
-						<div class="ui-block-a text-center" id="product-a">
-							<span class="" id="notificationPoor"><img src="img/bad.png" class="feedback-icons"/>
+						<div class="ui-block-a text-center" id="notification-a">
+							<span class="" ><img id="notificationPoor" src="img/bad.png" class="feedback-icons"/></span>
 						</div>
-						<div class="ui-block-b text-center" id="product-b">
-							<span class="" id="notificationAverage"><img src="img/average.png" class="feedback-icons"/>
+						<div class="ui-block-b text-center" id="notification-b">
+							<span class=""><img id="notificationAverage" src="img/average.png" class="feedback-icons"/></span>
 						</div>
-						<div class="ui-block-c text-center" id="product-c">
-							<span class="" id="notificationGreat"><img src="img/happy.png" class="feedback-icons"/>
+						<div class="ui-block-c text-center" id="notification-c">
+							<span class="" ><img id="notificationGreat" src="img/happy.png" class="feedback-icons"/></span>
 						</div>
-						<div class="ui-block-d text-center" id="product-c">
-							<span class="" id="notificationGreat"><img src="img/terrible.png" class="feedback-icons"/>
+						<div class="ui-block-d text-center" id="notification-d">
+							<span class="" ><img id="notificationTerrible" src="img/terrible.png" class="feedback-icons"/></span>
 						</div>
 					</div>
 				</div>
@@ -588,19 +588,10 @@ under the License.
 			<div class="list-view-div">
 				<div class="feedback_header  m-b-6 p-t-20 ui-header ui-bar-inherit" data-role="header" role="banner">
 					<span class="magenta-color-grey font-size-0.9">TODAY</span>
-					<span class="magenta-color-grey float_right p-r-9">sun, july 6 2014</span>
+					<span class="magenta-color-grey float_right p-r-9" id="todayDate"></span>					
 				</div>
 			<div class="m-t-6">
 				<ul class="list-view-notification ui-listview"  data-icon="false"  data-role="listview">
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/mercy.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Mercy Electronics</h2>
-				            <p class="list-view-text-black p-l-15">Poonamallee High Rd, Chennai, Tamil Nadu</p>
-				        </a>
-				    </li>
 				    <li class="list-next" onclick="">
 				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
 				            <div class="circular list-item-icons">
@@ -610,10 +601,20 @@ under the License.
 				            <p class="list-view-text-black p-l-15">Ampa Skywalk Mall</p>
 				        </a>
 				    </li>
+				    <li class="list-next" onclick="">
+				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
+				            <div class="circular list-item-icons">
+				                <img class="circular list-item-img"src="img/restaurantimg/subway.jpeg" alt="" />
+				            </div>
+				            <h2 class="magenta-color-black list-view-head p-l-15">Subway</h2>
+				            <p class="list-view-text-black p-l-15">SkyWalk mall</p>
+				        </a>
+				    </li>
 				<!--</ul>-->
 				<div class="feedback_header ui-header ui-bar-inherit" data-role="header" role="banner">
 					<span class="magenta-color-grey font-bold">YESTERDAY</span>
-					<span class="magenta-color-grey float_right p-r-9">sun, july 6 2014</span>
+					<!--<span class="magenta-color-grey float_right p-r-9 id="yestDay">sun, july 6 2014</span>-->
+					<span class="magenta-color-grey float_right p-r-9" id="yestDay"></span>
 				</div>
 				<!--<ul class="list-view ui-listview" id="list-view" data-input="#searchTicket" data-icon="false" data-filter="true" data-role="listview">-->
 				    <li class="list-next" onclick="">

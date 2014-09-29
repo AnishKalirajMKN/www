@@ -36,6 +36,10 @@ var app = {
 	onDeviceReady : function() {
 		// navigator.geolocation.watchPosition();  getCurrentPosition
 		app.onSuccess();
+		
+		app.showCurrentDate();
+		app.showYesterdaysDate();
+		
 	},
 
 	onSuccess : function(position) {
@@ -138,6 +142,43 @@ var app = {
     dummyFunction : function() {
     	
     },
+    
+    getWeekDay : function(day) {
+		var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+	    return days[ day ];
+	},
+	
+	getMonth : function(month) {
+		var months = ['Jan','Feb','March','April','May',
+		'June','July','Aug','Sep','Oct','Nov','Dec'];
+		return months[ month ];
+	},
+	
+    showCurrentDate : function() {
+    	var day;
+    	var today = new Date();
+    	var dd = today.getDate();
+		var mm = today.getMonth();
+		var yyyy = today.getFullYear();
+		if(dd<10){dd='0'+dd}
+    	var getDay = today.getDay(); 
+    	today = app.getWeekDay(getDay) + ',' + ' ' + app.getMonth(mm) + ' ' + dd + ' ' + yyyy;
+		$('#todayDate').text(today);
+    },
+    
+    showYesterdaysDate : function() {
+    	var day;
+    	var yesterday;
+    	yesterday = new Date();
+	    yesterday.setDate(yesterday.getDate() - 1);
+		var dd = yesterday.getDate();    
+		var mm = yesterday.getMonth();                    
+		var yyyy = yesterday.getFullYear();  
+		var getDay = yesterday.getDay();  
+		if(dd<10){dd='0'+dd}
+		yesterday = app.getWeekDay(getDay) + ',' + ' ' + app.getMonth(mm) + ' ' + dd + ' ' +yyyy;
+		$("#yestDay").text(yesterday);
+	},
 
     //---------------RATE IT NOW------------------//
     rateIt : function(message,tips,slider) {
