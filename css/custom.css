@@ -47,7 +47,7 @@
 .m-t-33 {
 	margin-top: 33px;
 }
-.p-t-50 {
+.p-t-40 {
 	padding-top: 40px !important;
 }
 
@@ -602,6 +602,13 @@ div.gallery-item img { display: block; width: 100%; height: auto; }
 	text-align: center;
 }
 
+.overflow-visible {
+	overflow: visible;
+}
+
+.p-t-50{
+	padding-top: 50px;
+}
 .m-t-70- {
     margin-top: -70px;
 }

@@ -232,7 +232,7 @@ under the License.
 						<br/>
 					</label>
 					<input type="range" name="slider-fill" id="slider-fill" value="5" min="0" max="10" data-highlight="true" />
-					<div class="ui-grid-b foot_text p-t-50">
+					<div class="ui-grid-b foot_text p-t-40">
 						<div class="ui-block-a">
 							<span>Not Likely</span>
 						</div>
@@ -555,8 +555,8 @@ under the License.
 						<br/>
 					</label>
 				</div>
-				<div class="messages_div m-t-3">
-					<div class="ui-grid-c m-t-70-">
+				<div class="messages_div m-t-3 ">
+					<div class="ui-grid-c m-t-70- overflow-visible">
 						<div class="ui-block-a text-center" id="notification-a">
 							<span class="" ><img id="notificationPoor" src="img/bad.png" class="feedback-icons"/></span>
 						</div>
@@ -571,8 +571,8 @@ under the License.
 						</div>
 					</div>
 				</div>
-				<div class="m-t-25">
-					<a href="#" data-role="button" class="colour-grey font-normal-important">Add a place</a>
+				<div class="m-t-25 p-t-50">
+					<a href="#" data-role="button" class="colour-grey font-normal-important" id="addNew">Add a place</a>
 				</div>
 			</div>
 		</div>
@@ -977,6 +977,38 @@ under the License.
 				//-----------------/Services Click Function-----------------//
 
 				// ----------------------------------- /Functions for feeback div -----------------------------------------
+				
+				
+				$('#addNew').click(function() {
+					
+					var name = $('#name').val();
+					var category = $('#category').val();
+					var address = $('#name').val();
+					var phone = $('#category').val();
+					var addMore = $('#addMoreDetails').val();
+					
+					$.ajax({
+				         url: 'https://api.foursquare.com/v2/venues/add?oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914',
+				         type: 'POST',
+				         dataType: 'json',
+						 data: {
+						  "name" : name,
+						  "ll" : "13.075909,80.2245190"
+						  //"primaryCategoryId": "random category"
+						 },
+				         success: function(data) {
+				        				        
+				         	alert('successfully Added');
+				         },
+				         error : function(data,jqXHR){ 				        
+				         	alert(data.responseJSON.meta.errorDetail);				      
+						 }
+				  
+																										
+						 
+			       });				  
+			   });
+
 
 				// ----------------------------------- Scripts for feeback div -----------------------------------------
 				$('#rateIt').click(function() {
@@ -993,6 +1025,34 @@ under the License.
 					}
 				});
 				// ----------------------------------- /Scripts for feeback div -----------------------------------------
+				
+				//---------------Animation for Smiley select (ADD NEW PAGE)------//
+				$("#notificationPoor").click(function() {
+					$("#notificationPoor").addClass('transition');
+					$("#notificationAverage").removeClass('transition');
+					$("#notificationTerrible").removeClass('transition');
+					$("#notificationGreat").removeClass('transition');
+				});
+				$("#notificationAverage").click(function() {
+					$("#notificationAverage").addClass('transition');
+					$("#notificationPoor").removeClass('transition');
+					$("#notificationTerrible").removeClass('transition');
+					$("#notificationGreat").removeClass('transition');
+				});
+				$("#notificationGreat").click(function() {
+					$("#notificationGreat").addClass('transition');
+					$("#notificationAverage").removeClass('transition');
+					$("#notificationPoor").removeClass('transition');
+					$("#notificationTerrible").removeClass('transition');
+				});
+				$("#notificationTerrible").click(function() {
+					$("#notificationTerrible").addClass('transition');
+					$("#notificationAverage").removeClass('transition');
+					$("#notificationGreat").removeClass('transition');
+					$("#notificationPoor").removeClass('transition');
+				});
+
+				//---------------/Animation for Smiley select (ADD NEW PAGE)------//
 			});
 		</script>
 	</body>
