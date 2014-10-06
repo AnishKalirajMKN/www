@@ -141,7 +141,6 @@ var app = {
     },
     
     category : function() {   
-    	alert('category called'); 	
     	$.ajax({
 			url : "https://api.foursquare.com/v2/venues/categories?&oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140707",
 			type : 'GET',
