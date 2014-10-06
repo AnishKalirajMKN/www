@@ -532,57 +532,58 @@ under the License.
 						<input type="text" class="ui-input-listview border-style border-colour input" id="name" placeholder="Name" />
 					</div>
 					<div data-role="main">
-                       <select class="category-design" id="categoryList-select">
-                        
-                       </select>
-                   
-					<div class="m-l-10 m-r-10 p-b-8">
-						<input type="text" class="ui-input-listview border-style border-colour" id="address" placeholder="Address" />
-					</div>
-					<div class="m-l-10 m-r-10 p-b-8">
-						<input type="text" class="ui-input-listview border-style border-colour" id="phone" placeholder="Phone" />
-					</div>
-					<div class="m-l-10 m-r-10 p-b-8">
-						<input type="text" class="ui-input-listview border-style border-colour" id="addDetails" placeholder="Add more details (optional)" />
-					</div>
-				</div>
-				<div class="nps_div m-t-25 box-padding">
-					<div class="m-t-8">
-						<h5 class="m-l-10 magenta_color font_normal">RATING</h5>
-						<h5 class="m-l-10 m-t-18 font_normal font-siz-17">How do you rate this place?</h5>
-					</div>
-					<br />
-					<br />
-					<label>
-						<br/>
-					</label>
-				</div>
-				<div class="messages_div m-t-3 ">
-					<div class="ui-grid-c m-t-70- overflow-visible">
-						<div class="ui-block-a text-center" id="notification-a">
-							<span class="" ><img id="notificationPoor" src="img/bad.png" class="feedback-icons"/></span>
+						<select class="category-design" id="categoryList-select">
+
+						</select>
+
+						<div class="m-l-10 m-r-10 p-b-8">
+							<input type="text" class="ui-input-listview border-style border-colour" id="address" placeholder="Address" />
 						</div>
-						<div class="ui-block-b text-center" id="notification-b">
-							<span class=""><img id="notificationAverage" src="img/average.png" class="feedback-icons"/></span>
+						<div class="m-l-10 m-r-10 p-b-8">
+							<input type="text" class="ui-input-listview border-style border-colour" id="phone" placeholder="Phone" />
 						</div>
-						<div class="ui-block-c text-center" id="notification-c">
-							<span class="" ><img id="notificationGreat" src="img/happy.png" class="feedback-icons"/></span>
-						</div>
-						<div class="ui-block-d text-center" id="notification-d">
-							<span class="" ><img id="notificationTerrible" src="img/terrible.png" class="feedback-icons"/></span>
+						<div class="m-l-10 m-r-10 p-b-8">
+							<input type="text" class="ui-input-listview border-style border-colour" id="addDetails" placeholder="Add more details (optional)" />
 						</div>
 					</div>
-				</div>
-				<div class="m-t-25 p-t-50">
-					<a href="#" data-role="button" class="colour-grey font-normal-important" id="addNew">Add a place</a>
+					<div class="nps_div m-t-25 box-padding">
+						<div class="m-t-8">
+							<h5 class="m-l-10 magenta_color font_normal">RATING</h5>
+							<h5 class="m-l-10 m-t-18 font_normal font-siz-17">How do you rate this place?</h5>
+						</div>
+						<br />
+						<br />
+						<label>
+							<br/>
+						</label>
+					</div>
+					<div class="messages_div m-t-3 ">
+						<div class="ui-grid-c m-t-70- overflow-visible">
+							<div class="ui-block-a text-center" id="notification-a">
+								<span class="" ><img id="notificationPoor" src="img/bad.png" class="feedback-icons"/></span>
+							</div>
+							<div class="ui-block-b text-center" id="notification-b">
+								<span class=""><img id="notificationAverage" src="img/average.png" class="feedback-icons"/></span>
+							</div>
+							<div class="ui-block-c text-center" id="notification-c">
+								<span class="" ><img id="notificationGreat" src="img/happy.png" class="feedback-icons"/></span>
+							</div>
+							<div class="ui-block-d text-center" id="notification-d">
+								<span class="" ><img id="notificationTerrible" src="img/terrible.png" class="feedback-icons"/></span>
+							</div>
+						</div>
+					</div>
+					<div class="m-t-25 p-t-50">
+						<a href="#" data-role="button" class="colour-grey font-normal-important" id="addNew">Add a place</a>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- ------------------------------------- /ADD NEW PAGE ------------------------------------------------------ -->
-		
+
 		<!-- ------------------------------------- NOTIFICATION PAGE ------------------------------------------------------ -->
 		<div data-role="page" id="notification-page">
-			<div data-position="fixed" class="index-header ui-header ui-bar-inherit ui-header-fixed slidedown" data-role="header" role="banner">				
+			<div data-position="fixed" class="index-header ui-header ui-bar-inherit ui-header-fixed slidedown" data-role="header" role="banner">
 				<div class="header_center">
 					<h2 class="head-text-notification white-color-important">Notifications</h2>
 				</div>
@@ -590,135 +591,135 @@ under the License.
 			<div class="list-view-div">
 				<div class="feedback_header  m-b-6 p-t-20 ui-header ui-bar-inherit" data-role="header" role="banner">
 					<span class="magenta-color-grey font-size-0.9">TODAY</span>
-					<span class="magenta-color-grey float_right p-r-9" id="todayDate"></span>					
+					<span class="magenta-color-grey float_right p-r-9" id="todayDate"></span>
 				</div>
-			<div class="m-t-6">
-				<ul class="list-view-notification ui-listview"  data-icon="false"  data-role="listview">
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img" src="img/restaurantimg/kfc.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">KFC</h2>
-				            <p class="list-view-text-black p-l-15">Ampa Skywalk Mall</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/subway.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Subway</h2>
-				            <p class="list-view-text-black p-l-15">SkyWalk mall</p>
-				        </a>
-				    </li>
-				<!--</ul>-->
-				<div class="feedback_header ui-header ui-bar-inherit" data-role="header" role="banner">
-					<span class="magenta-color-grey font-bold">YESTERDAY</span>
-					<!--<span class="magenta-color-grey float_right p-r-9 id="yestDay">sun, july 6 2014</span>-->
-					<span class="magenta-color-grey float_right p-r-9" id="yestDay"></span>
-				</div>
-				<!--<ul class="list-view ui-listview" id="list-view" data-input="#searchTicket" data-icon="false" data-filter="true" data-role="listview">-->
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/coffeeday.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Cafe Coffee Day</h2>
-				            <p class="list-view-text-black p-l-15">Ampa Skywalk</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/subway.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Subway</h2>
-				            <p class="list-view-text-black p-l-15">SkyWalk mall</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/Westside.jpg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Westside</h2>
-				            <p class="list-view-text-black p-l-15">Ampa Skywalk Mall, Nelson Manickam Road</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/mcdonald.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">McDonald's</h2>
-				            <p class="list-view-text-black p-l-15">Ampa Skywalk Mall</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/nike.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Nike Store</h2>
-				            <p class="list-view-text-black p-l-15">Ampa Skywalk</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/pizzahut.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Pizza Hut</h2>
-				            <p class="list-view-text-black p-l-15">Ampa Skywalk</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/apple.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Apple Imagine</h2>
-				            <p class="list-view-text-black p-l-15">SkyWalk Mall</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/landmark.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Landmark</h2>
-				            <p class="list-view-text-black p-l-15">Ampa Skywalk Mall</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/just.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Jus' Sportz</h2>
-				            <p class="list-view-text-black p-l-15">Amp Skywalk</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/adidas.jpeg" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Adidas</h2>
-				            <p class="list-view-text-black p-l-15">Shop No. 7, First Floor, Ampa Skywalk, No. 1, Nelson Manikkam Road, Aminjikarai</p>
-				        </a>
-				    </li>
-				    <li class="list-next" onclick="">
-				        <a class="ui-btn border-width-0" data-transition="slide" href="#">
-				            <div class="circular list-item-icons">
-				                <img class="circular list-item-img"src="img/restaurantimg/Dominos.png" alt="" />
-				            </div>
-				            <h2 class="magenta-color-black list-view-head p-l-15">Domino's Pizza</h2>
-				            <p class="list-view-text-black p-l-15">Nelson Manikam Road</p>
-				        </a>
-				    </li>
-				</ul>
+				<div class="m-t-6">
+					<ul class="list-view-notification ui-listview"  data-icon="false"  data-role="listview">
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img" src="img/restaurantimg/kfc.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">KFC</h2>
+							<p class="list-view-text-black p-l-15">
+								Ampa Skywalk Mall
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/subway.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Subway</h2>
+							<p class="list-view-text-black p-l-15">
+								SkyWalk mall
+							</p> </a>
+						</li>
+						<!--</ul>-->
+						<div class="feedback_header ui-header ui-bar-inherit" data-role="header" role="banner">
+							<span class="magenta-color-grey font-bold">YESTERDAY</span>
+							<!--<span class="magenta-color-grey float_right p-r-9 id="yestDay">sun, july 6 2014</span>-->
+							<span class="magenta-color-grey float_right p-r-9" id="yestDay"></span>
+						</div>
+						<!--<ul class="list-view ui-listview" id="list-view" data-input="#searchTicket" data-icon="false" data-filter="true" data-role="listview">-->
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/coffeeday.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Cafe Coffee Day</h2>
+							<p class="list-view-text-black p-l-15">
+								Ampa Skywalk
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/subway.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Subway</h2>
+							<p class="list-view-text-black p-l-15">
+								SkyWalk mall
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/Westside.jpg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Westside</h2>
+							<p class="list-view-text-black p-l-15">
+								Ampa Skywalk Mall, Nelson Manickam Road
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/mcdonald.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">McDonald's</h2>
+							<p class="list-view-text-black p-l-15">
+								Ampa Skywalk Mall
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/nike.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Nike Store</h2>
+							<p class="list-view-text-black p-l-15">
+								Ampa Skywalk
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/pizzahut.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Pizza Hut</h2>
+							<p class="list-view-text-black p-l-15">
+								Ampa Skywalk
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/apple.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Apple Imagine</h2>
+							<p class="list-view-text-black p-l-15">
+								SkyWalk Mall
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/landmark.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Landmark</h2>
+							<p class="list-view-text-black p-l-15">
+								Ampa Skywalk Mall
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/just.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Jus' Sportz</h2>
+							<p class="list-view-text-black p-l-15">
+								Amp Skywalk
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/adidas.jpeg" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Adidas</h2>
+							<p class="list-view-text-black p-l-15">
+								Shop No. 7, First Floor, Ampa Skywalk, No. 1, Nelson Manikkam Road, Aminjikarai
+							</p> </a>
+						</li>
+						<li class="list-next" onclick="">
+							<a class="ui-btn border-width-0" data-transition="slide" href="#">
+							<div class="circular list-item-icons">
+								<img class="circular list-item-img"src="img/restaurantimg/Dominos.png" alt="" />
+							</div> <h2 class="magenta-color-black list-view-head p-l-15">Domino's Pizza</h2>
+							<p class="list-view-text-black p-l-15">
+								Nelson Manikam Road
+							</p> </a>
+						</li>
+					</ul>
 
 				</div>
 			</div>
@@ -741,13 +742,12 @@ under the License.
 					</div>
 					<div class="ui-block-d">
 						<div class="header_center">
-							<a href="#status-page" data-transition="slideup"><img src="img/me.png" alt="Alphabet logo"class="arrow_center list-footer-icons list-footer-icons-me"/>
-							<span class="icon-text">Me</span></a>
+							<a href="#status-page" data-transition="slideup"><img src="img/me.png" alt="Alphabet logo"class="arrow_center list-footer-icons list-footer-icons-me"/> <span class="icon-text">Me</span></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 		<!-- ------------------------------------- /NOTIFICATION PAGE ------------------------------------------------------ -->
 
@@ -871,38 +871,32 @@ under the License.
 				//-----------------/Services Click Function-----------------//
 
 				// ----------------------------------- /Functions for feeback div -----------------------------------------
-				
-				
+
 				$('#addNew').click(function() {
-					
+
 					var name = $('#name').val();
 					var category = $('#categoryList-select').val();
 					var address = $('#name').val();
 					var phone = $('#category').val();
 					var addMore = $('#addMoreDetails').val();
-					
-					$.ajax({
-				         url: 'https://api.foursquare.com/v2/venues/add?oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914',
-				         type: 'POST',
-				         dataType: 'json',
-						 data: {
-						  "name" : name,
-						  "ll" : "13.075909,80.2245190"
-						  //"primaryCategoryId": "random category"
-						 },
-				         success: function(data) {
-				        				        
-				         	alert('successfully Added');
-				         },
-				         error : function(data,jqXHR){ 				        
-				         	alert(data.responseJSON.meta.errorDetail);				      
-						 }
-				  
-																										
-						 
-			       });				  
-			   });
 
+					$.ajax({
+						url : 'https://api.foursquare.com/v2/venues/add?oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914',
+						type : 'POST',
+						dataType : 'json',
+						data : {
+							"name" : name,
+							"ll" : "13.075909,80.2245190"
+							//"primaryCategoryId": "random category"
+						},
+						success : function(data) {
+							alert('successfully Added');
+						},
+						error : function(data, jqXHR) {
+							alert(data.responseJSON.meta.errorDetail);
+						}
+					});
+				});
 
 				// ----------------------------------- Scripts for feeback div -----------------------------------------
 				$('#rateIt').click(function() {
@@ -917,9 +911,51 @@ under the License.
 						$("#slider-fill").slider("refresh");
 						app.rateIt(shareMessage, userTips, sliderfill);
 					}
+					var url = 'http://rateit.cloudapp.net/services/api/rates';
+					var jsonData = {
+						"futureFBTwtrID" : "id-209",
+						"rateItUser" : "Test User",
+						"rateItVenuePlacesID" : "123",
+						"fourSquareVenueID" : "456",
+						"bizName" : "RSM Bakery",
+						"address" : "No.15",
+						"phoneNum" : "7847145961",
+						"latlong" : "24,22",
+						"category" : "Cafe",
+						"subCategory" : "Food",
+						"country" : "India",
+						"coreRateIt" : "5",
+						"ratepic" : "",
+						"deviceType" : "123",
+						"deviceId" : "44444",
+						"pushAccessToken" : "45",
+						"managerMsg" : "managerMsg",
+						"fileLocation" : "fileLocation",
+						"serviceWas" : "1/2/3",
+						"productWas" : "1/2/3"
+					};
+					$.ajax({
+						url : url,
+						type : 'POST',
+						dataType : 'json',
+						data : JSON.stringify(jsonData),
+						success : function() {
+							alert('Success!');
+						},
+						error : function() {
+							alert('Oops!');
+						},
+						beforeSend : setHeader
+					});
+					function setHeader(xhr) {
+						xhr.setRequestHeader('Authorization', 'Basic cmF0ZWl0OlIxUmF0ZQ==');
+						xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+						xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+					}
+
 				});
 				// ----------------------------------- /Scripts for feeback div -----------------------------------------
-				
+
 				//---------------Animation for Smiley select (ADD NEW PAGE)------//
 				$("#notificationPoor").click(function() {
 					$("#notificationPoor").addClass('transition');
