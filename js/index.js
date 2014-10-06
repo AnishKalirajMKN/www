@@ -39,6 +39,7 @@ var app = {
 		
 		app.showCurrentDate();
 		app.showYesterdaysDate();
+		app.category();
 		
 	},
 
@@ -138,7 +139,29 @@ var app = {
                 }*/
            
     },
-
+    
+    category : function() {   
+    	alert('category called'); 	
+    	$.ajax({
+			url : "https://api.foursquare.com/v2/venues/categories?&oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140707",
+			type : 'GET',
+			crossDomain : true,
+			timeout : 30000,			
+			data : JSON.stringify({
+				key : "value"
+			}),
+			error : function(jqXHR) {
+				alert('error called');
+				console.log(jqXHR);
+			}
+		}).done(function(data, textStatus, jqXHR) {
+			$.each(data.response.categories, function(i, item) {
+			$('#categoryList-select').append('<option value=" ' + data.response.categories[i].id + ' ">' + data.response.categories[i].name + '</option>');							
+			});
+			app.hideLoader();			
+		});	
+    },
+    
     dummyFunction : function() {
     	
     },

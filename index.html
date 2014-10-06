@@ -531,9 +531,11 @@ under the License.
 					<div class="m-l-10 m-r-10 m-t-42 p-b-8">
 						<input type="text" class="ui-input-listview border-style border-colour input" id="name" placeholder="Name" />
 					</div>
-					<div class="m-l-10 m-r-10 p-b-8">
-						<input type="text" class="ui-input-listview border-style border-colour" id="category" placeholder="Category" />
-					</div>
+					<div data-role="main">
+                       <select class="category-design" id="categoryList-select">
+                        
+                       </select>
+                   
 					<div class="m-l-10 m-r-10 p-b-8">
 						<input type="text" class="ui-input-listview border-style border-colour" id="address" placeholder="Address" />
 					</div>
@@ -874,7 +876,7 @@ under the License.
 				$('#addNew').click(function() {
 					
 					var name = $('#name').val();
-					var category = $('#category').val();
+					var category = $('#categoryList-select').val();
 					var address = $('#name').val();
 					var phone = $('#category').val();
 					var addMore = $('#addMoreDetails').val();
