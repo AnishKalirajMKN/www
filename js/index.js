@@ -26,17 +26,15 @@ var app = {
 	// Bind any events that are required on startup. Common events are:
 	// 'load', 'deviceready', 'offline', and 'online'.
 	bindEvents : function() {
-		// document.addEventListener('deviceready', this.onDeviceReady, false);
-		app.onDeviceReady();
+		document.addEventListener('deviceready', this.onDeviceReady, false);
+		// app.onDeviceReady();
 	},
 	// deviceready Event Handler
 	
 	// The scope of 'this' is the event. In order to call the 'receivedEvent'
 	// function, we must explicitly call 'app.receivedEvent(...);'
 	onDeviceReady : function() {
-		// navigator.geolocation.watchPosition();  getCurrentPosition
-		app.onSuccess();
-		
+		// app.onSuccess();
 		app.showCurrentDate();
 		app.showYesterdaysDate();
 		app.category();
@@ -44,11 +42,11 @@ var app = {
 	},
 
 	onSuccess : function(position) {
-		// window.localStorage["lattitude"] = position.coords.latitude;
-		// window.localStorage["longitude"] = position.coords.longitude;
+		 window.localStorage["lattitude"] = position.coords.latitude;
+		 window.localStorage["longitude"] = position.coords.longitude;
 		
-		window.localStorage["lattitude"] = 13.075661;
-		window.localStorage["longitude"] = 80.224583;
+		// window.localStorage["lattitude"] = 13.075661;
+		// window.localStorage["longitude"] = 80.224583;
 		// --------------------------------- Foursquare API --------------------------------------------------
 		$.ajax({
 					url : "https://api.foursquare.com/v2/venues/explore?ll="+window.localStorage['lattitude']+","+window.localStorage["longitude"]+"&oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914&radius=1000&sortByDistance=1",
