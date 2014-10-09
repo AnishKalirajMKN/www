@@ -26,8 +26,8 @@ var app = {
 	// Bind any events that are required on startup. Common events are:
 	// 'load', 'deviceready', 'offline', and 'online'.
 	bindEvents : function() {
-		document.addEventListener('deviceready', this.onDeviceReady, false);
-		// app.onDeviceReady();
+		// document.addEventListener('deviceready', this.onDeviceReady, false);
+		app.onDeviceReady();
 	},
 	// deviceready Event Handler
 	
@@ -38,6 +38,7 @@ var app = {
 		app.showCurrentDate();
 		app.showYesterdaysDate();
 		app.category();
+		app.discover();
 		
 	},
 
@@ -63,7 +64,7 @@ var app = {
 					var result = $.parseJSON(jqXHR.responseText);
 					$.each(result.response.groups[0].items, function(i, item) {
 					if(item.venue.name != undefined && item.venue.location.distance != undefined && item.venue.location.address != undefined){
-					$('#list-view').append('<li onclick="app.getShowFaces(\''+item.venue.name+'\');" class="list-next"> <a href="#faces-page" data-transition="slide" class="ui-btn"><div class="circle list-item-icons">'+
+					$('#list-view').append('<li onclick="app.getShowFaces(\''+item.venue.name+'\',\''+item.venue.location.address+'\');" class="list-next"> <a href="#faces-page" data-transition="slide" class="ui-btn"><div class="circle list-item-icons">'+
 						 '<h2 id="text">'+item.venue.location.distance+'</h2><h2 id="text-m">m</h2></div><h2 class="magenta_color list-view-head p-l-15">'+item.venue.name+'</h2>'+
 						 '<p class="magenta_color list-view-text p-l-15">'+item.venue.location.address+'</p> </a></li>');
 				app.hideLoader();
@@ -80,8 +81,9 @@ var app = {
 
 	},
 	
-	getShowFaces : function(placeName){
+	getShowFaces : function(placeName,placeAddress){
 		window.localStorage["placeName"] = placeName;
+		window.localStorage["placeAddress"] = placeAddress; 
 		$("#place-name").html(window.localStorage["placeName"]);
 		$("#feedback-name").html(window.localStorage["placeName"]);
 		// window.location.href = "faces.html";
@@ -199,8 +201,47 @@ var app = {
 		yesterday = app.getWeekDay(getDay) + ',' + ' ' + app.getMonth(mm) + ' ' + dd + ' ' +yyyy;
 		$("#yestDay").text(yesterday);
 	},
-
-    //---------------RATE IT NOW------------------//
+	
+	discover : function() {   
+    	$.ajax({
+			url : "http://rateit.cloudapp.net/services/api/showcase/search?country=singapore&offSet=10&limit=5",
+			headers: { 'Authorization': 'Basic cmF0ZWl0OlIxUmF0ZQ==', 'Content-Type': 'text/json' },
+			type : 'GET',	
+			dataType: 'json',		
+			timeout : 30000,			
+			data : JSON.stringify({
+				key : "value"
+			}),
+			error : function() {
+				alert('Error in fetching data from server');
+			}
+		}).done(function(data) {
+			 $.each(data, function(i, item) {
+					$('#discover-main').append('<div class="discover-img"><a href="#photofeed-page" onclick ="app.photofeed(\'' + item.picture_2 + '\',\'' + item.picture_3 + '\')" data-transition="slide"><img class="restaurant-img1 m-t--17" src="' + item.picture_2 + '"></a>'+
+					'<div><div class="ui-grid-b"><div class="ui-block-a"><span> <a href="#photofeed-page" onclick ="app.photofeed(\'' + item.picture_1 + '\',\'' + item.picture_2 + '\')" data-transition="slide"><img src="' + item.picture_1 + '" alt="restuarant-img" class="discover-sm-img1 m-t-5p"></a> </span></div>'+
+					'<div class="ui-block-b"><span><a href="#photofeed-page" onclick ="app.photofeed(\'' + item.picture_3 + '\',\'' + item.picture_2 + '\')" data-transition="slide"><img src="' + item.picture_3 + '" alt="restuarant-img" class="discover-sm-img2 m-t-5p"></a> </span></div>'+
+					'<div class="ui-block-c"><span> <a href="#photofeed-page" onclick ="app.photofeed(\'' + item.picture_4 + '\',\'' + item.picture_3 + '\')" data-transition="slide"><img src="' + item.picture_4 + '" alt="restuarant-img" class="discover-sm-img3 m-t-5p"></a> </span></div>'+																										
+					'</div></div></div><br/>'
+						+'<div class="adress-div ui-content"> <span class="discover-text1">'+ item.categories +'</span>'
+						+'<span class="discover-text2">'+item.name+'</span>'
+						+'<span> <img class="discover-smiley" src="img/very_happy.png"/> </span>'
+						+'<span class="discover-text3">'+item.address+'</span>'
+						+'</div>'
+						+'<div  class="ui-grid-b ui-content"><div class="ui-block-a"><a href="#" class="ui-btn buttonDiscover1">'
+						+'<div class="circle-small"></div> Rate It Now </a></div>'
+						+'<div class="ui-block-b"><a href="#" class="ui-btn buttonDiscover2"> <div class="circle-small"></div> Been there </a></div>'
+						+'<div class="ui-block-c"><a href="#" class="ui-btn buttonDiscover3"> <div class="circle-small"></div> Want to go </a>'
+						+'</div></div>');
+			});
+		});
+  },
+  
+   photofeed : function(img1,img2) {
+   $("#photofeed-img1").html('<img class="restaurant-img1 m-t--34" src="'+img1+'">');
+   $("#photofeed-img2").html('<img class="restaurant-img1 m-t--34" src="'+img2+'">');
+   },
+  
+       //---------------RATE IT NOW------------------//
     rateIt : function(message,tips,slider) {
     	var checkConnection = app.checkConnection();
     	if(checkConnection) {
@@ -216,6 +257,6 @@ var app = {
     		app.onOnline();
     	}	
     }
-};
+	};
 
 app.initialize(); 

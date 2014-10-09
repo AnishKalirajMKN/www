@@ -248,7 +248,7 @@ under the License.
 			<div data-role="footer" data-transition="slide" class="page-footer" data-position="fixed">
 				<h5 class="foot_text pagination">3 of 3</h5>
 				<div class="register-div">
-					<a href="#status-page"><img id="rateIt"src="img/rateit-button.png" alt="Rate it Logo" class="register-button"/></a>
+					<a href="#home-page"><img id="rateIt"src="img/rateit-button.png" alt="Rate it Logo" class="register-button"/></a>
 				</div>
 
 			</div>
@@ -387,43 +387,7 @@ under the License.
 				</div>
 			</div>
 			<!-- Content Images -->
-			<div class="discover-img">
-				<a href="#photofeed-page" data-transition="slide"><img class="restaurant-img1 m-t--17" src="img/restuatant1.jpg"></a>
-				<div>
-					<div class="ui-grid-b">
-						<div class="ui-block-a">
-							<span> <a href="#photofeed-page" data-transition="slide"><img src="img/discover1.jpg" alt="restuarant-img" class="discover-sm-img1 m-t-5p"></a> </span>
-						</div>
-						<div class="ui-block-b">
-							<span> <a href="#photofeed-page" data-transition="slide"><img src="img/discover2.jpg" alt="restuarant-img" class="discover-sm-img2 m-t-5p"></a> </span>
-						</div>
-						<div class="ui-block-c">
-							<span> <a href="#photofeed-page" data-transition="slide"><img src="img/discover3.jpg" alt="restuarant-img" class="discover-sm-img3 m-t-5p"></a> </span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- End of Images-->
-			<!--Address -->
-			<div data-role="content" class="adress-div">
-				<span class="discover-text1">RESTAURANT</span>
-				<span class="discover-text2">Alfred & Constance</span>
-				<span> <img src="img/very_happy.png" style="float: right;height: 45;"/> </span>
-				<span class="discover-text3">130 constance street, Fortunate Valley</span>
-				<span class="discover-text4">OLD 4006, Australia</span>
-			</div>
-			<div data-role="content" class="ui-grid-b">
-				<div class="ui-block-a">
-					<a href="#" class="ui-btn buttonDiscover1"> <div class="circle-small"></div> Rate It Now </a>
-				</div>
-				<div class="ui-block-b">
-					<a href="#" class="ui-btn buttonDiscover2"> <div class="circle-small"></div> Been there </a>
-				</div>
-				<div class="ui-block-c">
-					<a href="#" class="ui-btn buttonDiscover3"> <div class="circle-small"></div> Want to go </a>
-				</div>
-			</div>
+			<div id="discover-main"></div>
 
 			<!--End of address-->
 			<!-- Footer -->
@@ -466,8 +430,8 @@ under the License.
 				</div>
 			</div>
 			<!-- Content Images -->
-			<div class="discover-img">
-				<img class="restaurant-img1 m-t--34" src="img/coffeeshop.jpg">
+			<div class="discover-img" id="photofeed-img1">
+				<!--<img class="restaurant-img1 m-t--34" src="img/coffeeshop.jpg">-->
 			</div>
 			<div data-role="content">
 				<div class="photofeed-text1">
@@ -477,8 +441,8 @@ under the License.
 					Ambitioni dedisse scripsisse iudicaretur. Prima luce, cum quibus mons aliud consensu ab eo.Donec sed odio operae, eu vuilputate felis rhoncus. At noshric posthac, sitientis piros Afros.
 				</div>
 			</div>
-			<div class="discover-img">
-				<img class="restaurant-img1 m-t--34" src="img/coffeeshop2.jpg">
+			<div class="discover-img" id="photofeed-img2">
+				<!--<img class="restaurant-img1 m-t--34" src="img/coffeeshop2.jpg">-->
 			</div>
 			<!-- End of Images-->
 			<!-- Footer -->
@@ -787,14 +751,6 @@ under the License.
 
 				// ----------------------------------- Functions for feeback div -----------------------------------------
 
-				$('#fb-down').click(function() {
-					if (window.localStorage["product"] != undefined && window.localStorage["service"] != undefined) {
-					} else {
-						navigator.notification.alert('Please select both product & service.', app.dummyFunction(), 'Warning', 'OK');
-						//alert("Please select both product & service.");
-					}
-				});
-
 				//---------------Animation for Smiley select------//
 				$("#productPoor").click(function() {
 					$("#productPoor").addClass('transition');
@@ -869,30 +825,36 @@ under the License.
 					var address = $('#name').val();
 					var phone = $('#category').val();
 					var addMore = $('#addMoreDetails').val();
+					
+					alert('Added successfully');
 
-					$.ajax({
-						url : 'https://api.foursquare.com/v2/venues/add?oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914',
-						type : 'POST',
-						dataType : 'json',
-						data : {
-							"name" : name,
-							"ll" : "13.075909,80.2245190"
-							//"primaryCategoryId": "random category"
-						},
-						success : function(data) {
-							alert('successfully Added');
-						},
-						error : function(data, jqXHR) {
-							alert(data.responseJSON.meta.errorDetail);
-						}
-					});
+					// $.ajax({
+						// url : 'https://api.foursquare.com/v2/venues/add?oauth_token=WY3X05XXOORI50UCYEGSBIPCVPFYKL5SGV0JPPIJZ5D40TEV&v=20140914',
+						// type : 'POST',
+						// dataType : 'json',
+						// data : {
+							// "name" : name,
+							// "ll" : "13.075909,80.2245190"
+							// //"primaryCategoryId": "random category"
+						// },
+						// success : function(data) {
+							// alert('successfully Added');
+						// },
+						// error : function(data, jqXHR) {
+							// alert(data.responseJSON.meta.errorDetail);
+						// }
+					// });
 				});
 
 				// ----------------------------------- Scripts for feeback div -----------------------------------------
 				$('#rateIt').click(function() {
+					clearLocalStorage();
 					var shareMessage = $('#direct-message').val();
 					var userTips = $('#tips').val();
 					var sliderfill = $('#slider-fill').val();
+					var arr = [window.localStorage["lattitude"], window.localStorage["longitude"]];
+					var latLong = arr.toString();
+
 					if (shareMessage != '' && userTips != '') {
 						app.showLoader();
 						$('#direct-message').val('');
@@ -903,26 +865,26 @@ under the License.
 					}
 					var url = 'http://rateit.cloudapp.net/services/api/rates';
 					var jsonData = {
-						"futureFBTwtrID" : "id-209",
-						"rateItUser" : "Test User",
-						"rateItVenuePlacesID" : "123",
-						"fourSquareVenueID" : "456",
-						"bizName" : "RSM Bakery",
-						"address" : "No.15",
-						"phoneNum" : "7847145961",
-						"latlong" : "24,22",
-						"category" : "Cafe",
-						"subCategory" : "Food",
+						"futureFBTwtrID" : "",
+						"rateItUser" : "null",
+						"rateItVenuePlacesID" : "",
+						"fourSquareVenueID" : "",
+						"bizName" : window.localStorage["placeName"],
+						"address" : window.localStorage["placeAddress"],
+						"phoneNum" : "",
+						"latlong" : latLong,
+						"category" : "",
+						"subCategory" : "",
 						"country" : "India",
-						"coreRateIt" : "5",
+						"coreRateIt" : sliderfill,
 						"ratepic" : "",
-						"deviceType" : "123",
-						"deviceId" : "44444",
-						"pushAccessToken" : "45",
-						"managerMsg" : "managerMsg",
-						"fileLocation" : "fileLocation",
-						"serviceWas" : "1/2/3",
-						"productWas" : "1/2/3"
+						"deviceType" : "",
+						"deviceId" : "",
+						"pushAccessToken" : "",
+						"managerMsg" : shareMessage,
+						"fileLocation" : "",
+						"serviceWas" : window.localStorage["service"],
+						"productWas" : window.localStorage["product"]
 					};
 					$.ajax({
 						url : url,
@@ -931,6 +893,13 @@ under the License.
 						data : JSON.stringify(jsonData),
 						success : function() {
 							alert('Success!');
+							$("#productPoor").removeClass('transition');
+							$("#productAverage").removeClass('transition');
+							$("#productGreat").removeClass('transition');
+							$("#serviceGreat").removeClass('transition');
+							$("#servicePoor").removeClass('transition');
+							$("#serviceAverage").removeClass('transition');
+
 						},
 						error : function() {
 							alert('Oops!');
@@ -944,6 +913,12 @@ under the License.
 					}
 
 				});
+
+				function clearLocalStorage() {
+					localStorage.removeItem("product");
+					localStorage.removeItem("service");
+				}
+
 				// ----------------------------------- /Scripts for feeback div -----------------------------------------
 
 				//---------------Animation for Smiley select (ADD NEW PAGE)------//
